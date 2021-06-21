@@ -1,0 +1,17 @@
+
+
+
+/* navigation bar  */
+
+.navbar {
+    background: #ffe1de;
+    font: #222222;
+}
+
+.navbar .brand-logo {
+    font-size: 3rem;
+}
+
+.sidenav {
+    background-color: #ffe1de;
+}
