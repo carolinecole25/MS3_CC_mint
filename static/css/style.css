@@ -3,9 +3,12 @@
 
 /* navigation bar  */
 
-.navbar {
+.backgroundcolor {
     background: #ffe1de;
-    font: #222222;
+}
+
+.color {
+    background: #ffe1de;
 }
 
 .navbar .brand-logo {
