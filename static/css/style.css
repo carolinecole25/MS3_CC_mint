@@ -1,5 +1,8 @@
 
 
+/* fonts, colours,   */
+
+
 
 /* navigation bar  */
 
@@ -7,9 +10,6 @@
     background: #ffe1de;
 }
 
-.color {
-    background: #ffe1de;
-}
 
 .navbar .brand-logo {
     font-size: 3rem;
