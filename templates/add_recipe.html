@@ -5,19 +5,37 @@
 
     <div class="row">
         <form class="col s12" method="POST" action="">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="fas fa-user-circle prefix backgroundcolor black-text"></i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">First Name</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hat-chef prefix backgroundcolor black-text"></i>
+                    <input id="recipe_name" name="recipe_name" minlenght="5" maxlength="50" type="text" class="validate"
+                        required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-              <i class="fas fa-user-circle prefix backgroundcolor black-text"></i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telephone</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list prefix backgroundcolor black-text"></i>
+                    <textarea id="ingredients" name="ingredients" minlength="5" maxlength="200"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
+                        <input id="serves" name="serves" type="text" class="validate" required>
+                        <label for="serves">Serves</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
+                            <textarea id="method" name="method" minlength="5" maxlength="250"
+                                class="materialize-textarea validate" required></textarea>
+                            <label for="method">Method</label>
+                        </div>
+                </div>
             </div>
-          </div>
         </form>
-      </div>
+    </div>
 
 {% endblock %}
