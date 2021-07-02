@@ -2,7 +2,6 @@
 
 ![Responsive Design](assets/testing/responsivedesign.png ########)
 
-
 [View the deployed website]()
 
 ## Table of Content 
