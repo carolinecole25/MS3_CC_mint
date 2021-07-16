@@ -1,10 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="black-text backgroundcolor center-align"></h3>
+    <h3 class="black-text backgroundcolor center-align">Add Recipe</h3>
 
     <div class="row">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+            <!-- category selection -->
+			<div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+					<select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Task Category</label>
+				</div>
+			</div>
+            <!-- Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hat-chef prefix backgroundcolor black-text"></i>
@@ -13,6 +27,7 @@
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
+            <!-- Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-list prefix backgroundcolor black-text"></i>
@@ -20,19 +35,30 @@
                         class="materialize-textarea validate" required></textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
-                        <input id="serves" name="serves" type="text" class="validate" required>
-                        <label for="serves">Serves</label>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
-                            <textarea id="method" name="method" minlength="5" maxlength="250"
-                                class="materialize-textarea validate" required></textarea>
-                            <label for="method">Method</label>
-                        </div>
+            </div>
+            <!-- Number Serves -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
+                    <input id="serves" name="serves" type="text" class="validate" required>
+                    <label for="serves">Serves</label>
+                </div>
+            </div>
+            <!-- Method -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
+                    <textarea id="method" name="method" minlength="5" maxlength="250"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="method">Method</label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large backgroundcolor black-text">
+                        Add Task <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
         </form>
