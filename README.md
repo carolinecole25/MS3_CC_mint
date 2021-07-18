@@ -88,18 +88,19 @@
 ## Testing
 
 ### HTML Validation
-
+The [W3C Markup Validator Service](https://validator.w3.org/) was used to validate the HTML of the website. 
 
 ### CSS Validation
-
+The [W3C Validator Service](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS of the website.
 
 ### Accessibility 
-
+[Wave WebAIM web accessibility valisation](https://wave.webaim.org/) was used to ensure the website met a high level of accessibility and had no errors.
 
 ### Performance 
-
+[Google lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practices and SEO of the website.
 
 ### Javascript
+[JS Hint](https://jshint.com/) was used to test the Javascript code. All pages passed with zerp errors, click on the pages to see the result:
 
 ### Python
 

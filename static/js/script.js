@@ -1,6 +1,6 @@
 // credit: code taken from materializecss, linked in README.md
 
-$(document).ready(function(){
+$(document).ready(function () {
     $(".sidenav").sidenav({edge:"right"});
     $('.collapsible').collapsible();
   });
@@ -33,4 +33,3 @@ $(document).ready(function(){
             }
         });
     }
-});

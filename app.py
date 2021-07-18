@@ -105,7 +105,7 @@ def add_recipe():
     if request.method == "POST":
         recipe = {
             "category_name": request.form.get("category_name"),
-            "recipe_name": request.form.get("recipe_name")
+            "recipe_name": request.form.get("recipe_name"),
             "ingredients": request.form.getlist("ingredients"),
             "serves": request.form.get("serves"),
             "created_by": session["user"]
