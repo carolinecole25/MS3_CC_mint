@@ -114,7 +114,7 @@
 
 
 ## Bugs
-
+JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
 
 ## Deployment
 
@@ -136,7 +136,8 @@
 
 
 ### Javascript
-
+Code for ... taken from [Materialize](https://materializecss.com/)
+Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
 
 ### Python 
 
