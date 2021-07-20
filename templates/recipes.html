@@ -11,7 +11,7 @@
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
                     <a href="" class="btn-small">Done</a>
-                    <a href="" class="btn-small">Edit</a>
+                    <a href="{{ url_for('edit_task', task_id=recipe._id) }}" class="btn-small">Edit</a>
                 </div>
                 <div class="col s9">
                     <strong>{{ recipe.category_name }}</strong> : {{ recipe.recipe_name }}
@@ -22,7 +22,7 @@
                 <p>{{ recipe.serves }}</p>
                 <p>{{ recipe.ingredients }}</p>
                 <p>{{ recipe.method }}</p>
-                <p>{{ recipe.image_url }}</p> <!--THIS NEEDS CHANGING TO THE CORRECT LOCATION-->
+                <p>{{ recipe.image_url }}</p> <!--THIS NEEDS CHANGING TO THE CORRECT LINK-->
                 <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>
