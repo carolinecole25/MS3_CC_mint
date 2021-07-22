@@ -10,20 +10,24 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix black-text backgroundcolor"></i>
 					    <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
+                            {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
-					<label for="category_name">Task Category</label>
+					<label for="category_name">Category</label>
 				</div>
 			</div>
             <!-- Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hat-chef prefix backgroundcolor black-text"></i>
-                    <input id="recipe_name" name="recipe_name" minlenght="5" maxlength="50" type="text" class="validate"
-                        required>
+                    <input id="recipe_name" name="recipe_name" minlenght="5" maxlength="50" 
+                    value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
@@ -32,7 +36,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-list prefix backgroundcolor black-text"></i>
                     <textarea id="ingredients" name="ingredients" minlength="5" maxlength="200"
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>
+                    {{- recipe.ingredients -}}
+                    </textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
@@ -57,7 +63,7 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large backgroundcolor black-text">
-                        Edit Task <i class="fas fa-edit right"></i>
+                        Edit <i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>
