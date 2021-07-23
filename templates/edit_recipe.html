@@ -46,7 +46,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
-                    <input id="serves" name="serves" value="{{ recipe.recipe_serves }}" type="text" class="validate" required>
+                    <input id="serves" name="serves" type="text" class="validate" required>
+                    {{ recipe.recipe_serves }}
                     <label for="serves">Serves</label>
                 </div>
             </div>
