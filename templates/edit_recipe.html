@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
-                    <input id="serves" name="serves" type="text" class="validate" required>
+                    <input id="serves" name="serves" value="{{ recipe.recipe_serves }}" type="text" class="validate" required>
                     <label for="serves">Serves</label>
                 </div>
             </div>
@@ -55,13 +55,19 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
                     <textarea id="method" name="method" minlength="5" maxlength="250"
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>
+                        {{- recipe.method -}}
+                    </textarea>
                     <label for="method">Method</label>
                 </div>
             </div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('add_recipe') }}" class="btn-large backgroundcolor black-text">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large backgroundcolor black-text">
                         Edit <i class="fas fa-edit right"></i>
                     </button>
