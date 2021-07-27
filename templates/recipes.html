@@ -27,6 +27,9 @@
         <li>
             <div class="collapsible-header backgroundcolor">
                 <div class="col s3">
+                    <div class="receipe-slider owl-carousel">
+                        <img class="image img-thumbnail" src="{{recipes.image|safe}}" alt="recipe image">
+                    </div>  
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == recipe.created_by|lower %}
                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
@@ -37,12 +40,12 @@
                     <strong>{{ recipe.category_name }}</strong> : {{ recipe.recipe_name }}
                 </div>
             </div>
+            
             <div class="collapsible-body">
                 <strong>{{ recipe.recipe_name }}</strong>
                 <p>{{ recipe.serves }}</p>
                 <p>{{ recipe.ingredients }}</p>
                 <p>{{ recipe.method }}</p>
-                <p>{{ recipe.image_url }}</p> <!--THIS NEEDS CHANGING TO THE CORRECT LINK-->
                 <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
         </li>

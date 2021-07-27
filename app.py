@@ -61,7 +61,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        #check user is alreayd in db
+        #check user is already in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         if existing_user:
@@ -114,7 +114,8 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "ingredients": request.form.getlist("ingredients"),
             "serves": request.form.get("serves"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "recipe_image": request.form.get('image')
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Sucessfully Added")
