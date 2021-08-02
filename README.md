@@ -147,25 +147,23 @@ JavaScript dropdown menu did not work as expected, I used code from [Task Manage
 
 
 ## Credits
-
-
 ### HTML
-
-
+1. Code taken from [Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) tutorial videos to help with page layouts and linking pages for base.html, categories.html, add_category.html, add_recipe.html, edit_category.html, edit_recipe.html, login.html, register.html, profile.html, recipes.html. The video tutorials helped guide me through writing my code but adapting it to how I wanted my website to look. 
+2. 
 
 ### CSS
 
 
 
 ### Javascript
-Code for ... taken from [Materialize](https://materializecss.com/)
-Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
+1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/)
+2. Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
 
 ### Python 
-
+1. Code for  taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) 
 
 ### Media
-
+1. Images taken from 
 
 ### Text 
 

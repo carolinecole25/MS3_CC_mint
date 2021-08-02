@@ -31,3 +31,9 @@
     margin: 5px;
     line-height: 42px;
 }
+
+/* image */
+recipe_image {
+    width: 15vh;
+    height: 15vh;
+}

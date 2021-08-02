@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+# Credit: Code taken from Task Manger (linked in README.md) and edited to suit project needs.
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -134,7 +135,8 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.getlist("ingredients"),
             "serves": request.form.get("serves"),
             "method": request.form.get("method"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "recipe_image": request.form.get('image')
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Sucessfully Updated")

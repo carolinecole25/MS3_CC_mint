@@ -28,8 +28,9 @@
             <div class="collapsible-header backgroundcolor">
                 <div class="col s3">
                     <div class="receipe-slider owl-carousel">
-                        <img class="image img-thumbnail" src="{{recipe.image|safe}}" alt="recipe image">
-                    </div>  
+                        <img class="recipe_image image img-thumbnail" src="{{ recipe.image }}" alt="recipe image">
+                    </div>
+                    {{ recipe.image }}  
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == recipe.created_by|lower %}
                     <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
