@@ -28,7 +28,7 @@
             <div class="collapsible-header backgroundcolor">
                 <div class="col s3">
                     <div class="receipe-slider owl-carousel">
-                        <img class="image img-thumbnail" src="{{recipes.image|safe}}" alt="recipe image">
+                        <img class="image img-thumbnail" src="{{recipe.image|safe}}" alt="recipe image">
                     </div>  
                     <i class="fas fa-caret-down"></i>
                     {% if session.user|lower == recipe.created_by|lower %}
