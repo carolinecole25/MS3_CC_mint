@@ -113,7 +113,7 @@ def add_recipe():
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
-            "ingredients": request.form.getlist("ingredients"),
+            "ingredients": request.form.get("ingredients"),
             "serves": request.form.get("serves"),
             "created_by": session["user"],
             "recipe_image": request.form.get('image')
