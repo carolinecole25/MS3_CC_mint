@@ -2,7 +2,7 @@
 
 ![Responsive Design](assets/testing/responsivedesign.png ########)
 
-[View the deployed website]()
+[View the deployed website](...)
 
 ## Table of Content 
 1. [Project Goals](#project-goals)
@@ -55,6 +55,7 @@ Mint website will meet users needs by:
 4. All pages to be functioning properly 
 5. The site to be fully responsive.
 
+
 ## User Experience
 ### User Stories 
 
@@ -87,9 +88,6 @@ I want the recipes to be the star of the show and everything else to be easy to 
 ### Colours
 
 
-### Backgrounds 
-
-
 ### Images 
 The images on the recipes section of website are of recipes to show clearly what the recipe is at one glance, this works well for this particular website. 
 The images on the utensils page are of products recommended for cooking. 
@@ -103,8 +101,8 @@ The images on the utensils page are of products recommended for cooking.
 * [Font awesome](https://fontawesome.com/) has been used throughout my wesbite.
 * [Materialize](https://materializecss.com/) has been used to help create the layout of this website.
 
-## Testing
 
+## Testing
 ### HTML Validation
 The [W3C Markup Validator Service](https://validator.w3.org/) was used to validate the HTML of the website. 
 Click on the page to see the results:
@@ -128,12 +126,37 @@ Click on the page name to see the result:
 
 ### Testing client stories from UX section 
 
-
 #### Site Users
-
+1. The ability to easily use and navigate the website.
+    1.  
+2. All recipes to be displaying effectively and is userfriendly.
+    1.
+3. A functioning main menu button which adapts to whether the user is logged in or not.
+    1. 
+4. Visual icons and images that suit the website.
+    1. 
+5. MongoDB to store data safely and effectively.
+    1. 
+6. Leaves users to wanting follow other users recipes and gain inspiration to cook. 
+    1. 
+7. Leaves users wanting to add more of their recipes onto the website.
+    1. 
+8. Users to enjoy visiting the website.
+    1. 
 
 #### Site Owner 
-
+9. As the site owner I want the customers to easily navigate the website.
+    1. 
+10. As the site owner I want all data inputted into the website, such as passwords, to be stored safely.
+    1. 
+11. As the site owner I want users coming back to use the site for inspiration or to have an easily accessible way of storing their recipes.
+    1. 
+12. As the site owner I want my websit to be fully functioning and responsive.
+    1. 
+13. As the site owner, I want the website to suit my target customer and adhere to their wants and needs.
+    1. 
+14. As the site owner, I want the website to be professional.
+    1. 
 
 ## Bugs
 JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
@@ -141,9 +164,7 @@ JavaScript dropdown menu did not work as expected, I used code from [Task Manage
 ## Deployment
 
 
-
 ## How to run this project locally
-
 
 
 ## Credits
@@ -154,16 +175,20 @@ JavaScript dropdown menu did not work as expected, I used code from [Task Manage
 ### CSS
 
 
-
 ### Javascript
-1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/)
-2. Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js)
+1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/).
+2. Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js).
+3.
 
 ### Python 
-1. Code for  taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) 
+1. Code for  taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase).
+2.
 
 ### Media
-1. Images taken from 
+1. Image for cornflake cakes taken from [Marmalade and Me](https://marmaladeandme.com/chocolate-cornflake-cakes/).
+2. Image for risotto taken from [Delish](https://www.delish.com/cooking/recipe-ideas/a29786303/risotto-rice-recipe/).
+3. Image for Chocolate Cookie taken from [Joanne Eats Well with Others](https://joanne-eatswellwithothers.com/2019/11/double-and-by-double-i-mean-triple-chocolate-cookies.html).
+4.
 
 ### Text 
 
