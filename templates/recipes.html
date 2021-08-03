@@ -28,7 +28,7 @@
             <div class="collapsible-header backgroundcolor">
                 <div class="col s3">
                     <div class="receipe-slider owl-carousel">
-                        <img class="recipe_image image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
+                        <img class="image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
                     </div>
                     {{ recipe.image }}  
                     <i class="fas fa-caret-down"></i>
@@ -44,10 +44,10 @@
             
             <div class="collapsible-body">
                 <strong>{{ recipe.recipe_name }}</strong>
-                <p>{{ recipe.serves }}</p>
-                <p>{{ recipe.ingredients }}</p>
-                <p>{{ recipe.method }}</p>
-                <p><em>by: {{ recipe.created_by }}</em></p>
+                <p>Serving: {{ recipe.serves }}</p>
+                <p>Ingredients: {{ recipe.ingredients }}</p>
+                <p>Method: {{ recipe.method }}</p>
+                <p><em>Created by: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}

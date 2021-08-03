@@ -33,7 +33,7 @@
 }
 
 /* image */
-recipe_image {
-    width: 15vh;
-    height: 15vh;
+.image {
+    width: 25vh;
+    height: auto;
 }
