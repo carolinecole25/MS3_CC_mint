@@ -93,8 +93,13 @@ The images on the recipes section of website are of recipes to show clearly what
 The images on the utensils page are of products recommended for cooking. 
 
 ### Wireframes 
-
-
+* [Home](static/wireframes/home.png)
+* [Login](static/wireframes/login.png)
+* [Register](static/wireframes/register.png)
+* [Profile](static/wireframes/profile.png)
+* [Add Recipe](static/wireframes/addrecipe.png)
+* [Utensils](static/wireframes/utensils.png)
+* [Edit Recipe](static/wireframes/editrecipe.png)
 
 ## Technologies Used 
 * [Google Fonts](https://https://fonts.google.com/) has been used for my fonts.
