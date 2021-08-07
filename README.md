@@ -127,35 +127,57 @@ Click on the page name to see the result:
 
 #### Site Users
 1. The ability to easily use and navigate the website.
-    1.  
+    1.  There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
+
 2. All recipes to be displaying effectively and is userfriendly.
-    1.
+    1. All recipes appear on the recipe.html (home) page with all information.
+    2. The recipes have the functionality to edit and delete recipes if you are the owner.
+    3. There is a search box at the top of the page to enable users to search a particular recipe.
+
 3. A functioning main menu button which adapts to whether the user is logged in or not.
-    1. 
+    1. The menu bar shows, home, login and register when a user first enters the site.
+    2. Login page as a link to the register page if they do not have an account.
+    3. Register page has a link to the login page if they already have an account.
+    4. Once logged in or registered the menu bar shows all options including utensils, add recipe and profile page.
+
 4. Visual icons and images that suit the website.
-    1. 
+    1. The website is a subtle pink which does not over power the website leaving users focussing soley on the recipes and the contents of the site.
+    2. The images on the website are URLs of the recipes which suit the contents and on the utensils page.
+
 5. MongoDB to store data safely and effectively.
-    1. 
+    1. All data is stores safely and effectively on mongoDB.
+
 6. Leaves users to wanting follow other users recipes and gain inspiration to cook. 
-    1. 
+    1. I believe the site will leave users happy and engaged because it is very user friendly and is easy to search for recipes. 
+
 7. Leaves users wanting to add more of their recipes onto the website.
-    1. 
+    1. The website is very user friendly which would make it a good place for users to store their recipes for easy access to them when cooking. 
+
 8. Users to enjoy visiting the website.
-    1. 
+    1. I believe this website could entice anyone to get into cooking or baking.
+    2. Hopefully users will come back for me.
 
 #### Site Owner 
 9. As the site owner I want the customers to easily navigate the website.
-    1. 
+    1. 1. The site is very easy to navigate especially with the fixed nav bar meaning users can get to different pages of the website easily.
+    2. Each page is clearly labelled.
+    3. All pages are fully responsive. 
+
 10. As the site owner I want all data inputted into the website, such as passwords, to be stored safely.
-    1. 
+    1. All passwords and information are stored safely on mongoDB 
+
 11. As the site owner I want users coming back to use the site for inspiration or to have an easily accessible way of storing their recipes.
-    1. 
+    1.  The website is very user friendly which would make it a good place for users to store their recipes for easy access to them when cooking. 
+
 12. As the site owner I want my websit to be fully functioning and responsive.
-    1. 
+    1. All pages are fully responsive and functioning. 
+
 13. As the site owner, I want the website to suit my target customer and adhere to their wants and needs.
-    1. 
+    1. I beleive the website suits my target audience.
+    2. The name is a good fit too as it is called mint (the herb) which goes with the theme of recipes cooking and baking.
+
 14. As the site owner, I want the website to be professional.
-    1. 
+    1. I am pleased with the look and feel of this website. I beleive it feels professional and I hope users will think this too.
 
 ## Bugs
 JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
