@@ -26,7 +26,7 @@
     {% for recipe in recipes %}
     <li>
         <div class="collapsible-header backgroundcolor">
-            <div class="col s3">
+            <div class="col-sm-5">
                 <div class="receipe-slider owl-carousel">
                     <img class="image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
                 </div>
@@ -37,21 +37,22 @@
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-btn btn-small">Edit</a>
                 {% endif %}
             </div>
-            <div class="col s9">
-                <strong>{{ recipe.category_name }}</strong> : {{ recipe.recipe_name }}
-                <strong>{{ recipe.recipe_name }}</strong>
-                <p>Serving: {{ recipe.serves }}</p>
-                    <ul>{% set split_list = recipe.ingredients.split(', ') %}
-                        
-                            {% for ingredient in split_list %}
-                            <li>
-                            {{ ingredient }} 
+            <div>
+                <strong>{{ recipe.category_name }} : {{ recipe.recipe_name }} </strong>
+                    <ul>
+                        <li>Serves</li>
+                        <li>{{ recipe.serves }}</li>
+                    </ul>
+                <ul>Ingredients
+                    {% set split_list = recipe.ingredients.split(', ') %}
+                        {% for ingredient in split_list %}
+                        <li>
+                            {{ ingredient }}
                         </li>
-                        {% endfor %} 
+                        {% endfor %}
                     </ul>
             </div>
         </div>
-
         <div class="collapsible-body">
             <p>Method: {{ recipe.method }}</p>
             <p><em>Created by: {{ recipe.created_by }}</em></p>
