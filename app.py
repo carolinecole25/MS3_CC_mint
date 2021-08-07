@@ -133,7 +133,7 @@ def edit_recipe(recipe_id):
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
-            "ingredients": request.form.getlist("ingredients"),
+            "ingredients": request.form.get("ingredients"),
             "serves": request.form.get("serves"),
             "method": request.form.get("method"),
             "created_by": session["user"],

@@ -7,7 +7,7 @@
 /* navigation bar  */
 
 .backgroundcolor {
-    background: #ffe1de;
+    background: #ffe1dec5;
 }
 
 
@@ -16,7 +16,7 @@
 }
 
 .sidenav {
-    background-color: #ffe1de;
+    background-color: #ffe1dec5;
 }
 
 .flashes h4 {
@@ -32,8 +32,13 @@
     line-height: 42px;
 }
 
-/* image */
+/* recipe.html */
+
 .image {
     width: 25vh;
     height: auto;
+}
+
+.recipe-btn {
+
 }

@@ -203,7 +203,7 @@ JavaScript dropdown menu did not work as expected, I used code from [Task Manage
 
 ### Python 
 1. Code for  taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase).
-2.
+2. The code for ingredients I wanted to pull through as a list instead of a line of each. I used help from [Kite](https://www.kite.com/python/answers/how-to-get-the-split-a-string-with-a-jinja2-template-in-python) to fix this issue.
 
 ### Media
 1. Image for cornflake cakes taken from [Marmalade and Me](https://marmaladeandme.com/chocolate-cornflake-cakes/).
