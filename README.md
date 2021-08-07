@@ -1,6 +1,6 @@
 # Primerose Cottage
 
-![Responsive Design](assets/testing/responsivedesign.png ########)
+![Responsive Design](######)
 
 [View the deployed website](...)
 
@@ -81,12 +81,6 @@ Mint website will meet users needs by:
 ### Design choices 
 I designed this website to have a light pink theme to draw in my target customers. The colour is not too overpowering and leaves the recipes the center of attention on the page. 
 I want the recipes to be the star of the show and everything else to be easy to read, use and works well. 
-
-### Fonts
-
-
-### Colours
-
 
 ### Images 
 The images on the recipes section of website are of recipes to show clearly what the recipe is at one glance, this works well for this particular website. 
