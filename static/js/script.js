@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".sidenav").sidenav({edge:"right"});
     $('.collapsible').collapsible();
     $("select").formSelect();
+    $('.modal').modal();
   });
 
   // Credit: code taken from Task ManagerAuth, linked in README.md

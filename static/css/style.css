@@ -1,7 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 /* fonts, colours,   */
-
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 /* navigation bar  */
@@ -37,8 +39,4 @@
 .image {
     width: 25vh;
     height: auto;
-}
-
-.recipe-btn {
-
 }
