@@ -149,9 +149,9 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.tasks.remove({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
-    return redirect(url_for("add_recipe"))
+    return redirect(url_for("get_recipes"))
 
 
 @app.route("/get_categories")
