@@ -37,8 +37,6 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
-
-
 # Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -233,9 +231,8 @@ def utensil(utensil_id):
 @app.route("/search_utensil", methods=["GET", "POST"])
 def search_utensil():
     query = request.form.get("query")
-    utensil = list(mongo.db.utensils.find({"$text": {"$search": query}}))
-    result = mongo.db.utensil.count({"$text": {"$search": query}})
-    return render_template("utensils.hmtl", utensil=utensil, result=result)
+    utensils = list(mongo.db.utensils.find({"$text": {"$search": query}}))
+    return render_template("utensils.hmtl", utensils=utensils, result=result)
 
 
 # Add Utensil
