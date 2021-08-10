@@ -225,8 +225,8 @@ def utensils():
 
 @app.route("/utensil/<utensil_id>")
 def utensil(utensil_id):
-    utensils = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
-    return render_template("utensil.html", utensils=utensils)
+    utensil = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
+    return render_template("utensil.html", utensil=utensil)
 
 
 # Search for utensils 
@@ -235,7 +235,8 @@ def search_utensil():
     query = request.form.get("query")
     utensil = list(mongo.db.utensils.find({"$text": {"$search": query}}))
     result = mongo.db.utensil.count({"$text": {"$search": query}})
-    return render_template("utensils.hmtl", utensils=utensils, result=result)
+    return render_template("utensils.hmtl", utensil=utensil, result=result)
+
 
 # Add Utensil
 @app.route("/add_utensil", methods=["GET", "POST"])
