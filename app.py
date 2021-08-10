@@ -21,6 +21,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+
 @app.route("/")
 @app.route("/get_recipe")
 def get_recipes():
@@ -28,6 +29,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search for Recipes 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -35,6 +37,9 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+
+
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -59,6 +64,7 @@ def register():
     return render_template("register.html")
 
 
+# Login
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -87,6 +93,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile 
 @ app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from the database
@@ -99,6 +106,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Logout
 @app.route("/logout")
 def logout():
     #remove user from session cookies
@@ -107,6 +115,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add Recipe 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -127,6 +136,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# Edit Recipe 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -147,6 +157,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Delete Recipe 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -154,12 +165,14 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# Categories 
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
+# Add Categoies 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -173,6 +186,7 @@ def add_category():
     return render_template("add_category.html")
 
 
+# Edit Category 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -187,6 +201,7 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+# Delete Category 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
@@ -199,3 +214,14 @@ if __name__ == "__main__":
             port=int(os.environ.get("PORT")),
             debug=True)
 # Change true to false before submitting 
+
+
+# --------------- Utensils
+
+# Search for utensils 
+@app.route("/search_utensils", methods=["GET", "POST"])
+def search_utensil():
+    query = request.form.get("query")
+    tools = list(mongo.db.utensils.find({"$text": {$search: query}}))
+    result = mongo.db.tool.count({"$text": {"search": query}})
+    return render_template("utensils.hmtl", utensils=utensils, result=result)

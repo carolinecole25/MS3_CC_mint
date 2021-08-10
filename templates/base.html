@@ -26,7 +26,7 @@
                         {% if session.user|lower == "admin"|lower %}
                             <li><a href="{{ url_for('get_categories') }}" class="black-text">Manage Categories</a></li>
                         {% endif %}
-                        <li><a href="#" class="black-text">Utensils</a></li>
+                        <li><a href="{{ url_for('utensils') }}" class="black-text">Utensils</a></li>
                         <li><a href="{{ url_for('logout') }}" class="black-text">Logout</a></li>
                     {% else %}
                         <li><a href="{{ url_for('login') }}" class="black-text">Log In</a></li>
