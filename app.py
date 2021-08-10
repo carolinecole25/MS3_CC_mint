@@ -29,7 +29,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-# Search for Recipes 
+# Search for Recipes
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -218,10 +218,68 @@ if __name__ == "__main__":
 
 # --------------- Utensils
 
+# Credit: code taken from task manager project and adapted to fit utensils section of project.
+
+# Cooking utensils 
+
+@app.route("/utensils")
+def utensils():
+    utensils = list(mongo.db.utensils.find())
+    return render_template("utensils.html", utensils=utensils)
+
+
+@app.route("/utensil/<utensilid>")
+def utensil(utensil_id):
+    utensils = mongo.db.tools.find_one({"_id": ObjectId(Tool_id)})
+    return render_template("utensil.html", utensils=utensils)
+
+
 # Search for utensils 
 @app.route("/search_utensils", methods=["GET", "POST"])
 def search_utensil():
     query = request.form.get("query")
-    tools = list(mongo.db.utensils.find({"$text": {$search: query}}))
-    result = mongo.db.tool.count({"$text": {"search": query}})
+    utensil = list(mongo.db.utensils.find({"$text": {"$search": query}}))
+    result = mongo.db.tool.count({"$text": {"$search": query}})
     return render_template("utensils.hmtl", utensils=utensils, result=result)
+
+# Add Utensil
+@app.route("/add_tool", methods=["GET", "POST"])
+def add_tool():
+    if request.method == "POST":
+        tool = {
+            "tool_name": request.form.get("tool_name"),
+            "tool_description": request.form.get("tool_description"),
+            "tool_details": request.form.get("tool_details"),
+            "tool_image": request.form.get("tool_image")
+        }
+        mongo.db.tools.insert_one(tool)
+        flash("You're tool was successfully added")
+        return redirect(url_for("tools"))
+
+    name = mongo.db.tools.find().sort("tool_name", 1)
+    return render_template("add_tool.html", name=name)
+
+
+# Delete Utensil
+@app.route("/delete_tool/<tool_id>")
+def delete_tool(tool_id):
+    mongo.db.tools.remove({"_id": ObjectId(tool_id)})
+    flash("You're tool has been deleted")
+    return redirect(url_for("tools"))
+
+
+# Edit Utensil
+@app.route("/edit_utensil/<utensil_id>", methods=["GET", "POST"])
+def edit_tool(tool_id):
+    if request.method == "POST":
+        tool = {
+            "utensil_name": request.form.get("utensil_name"),
+            "utensil_description": request.form.get("utensil_description"),
+            "utensil_details": request.form.get("utensil_details"),
+            "utensil_image": request.form.get("utensil_image")
+        }
+        mongo.db.utensils.update({"_id": ObjectId(tool_id)}, tool)
+        flash("You're tool was successfully updated")
+
+    tools = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
+    return render_template("edit_utensil.html", tools=tools)
