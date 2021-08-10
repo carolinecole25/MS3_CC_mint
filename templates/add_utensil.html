@@ -1,52 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="black-text backgroundcolor center-align">Add Utensil</h3>
+<!--Page Title -->
+<h4 class="black-text center-align">Add Utensil
+    <hr class="backgroundcolor page-underline s8 m8 l8">
+</h4>
 
-            <!-- Utensil Name -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix black-text"></i>
-                    <input id="utensil_name" name="utensil_name" minlenght="5" maxlength="50" type="text" class="validate"
-                        required>
-                    <label for="utensil_name">Utensil Name</label>
-                </div>
-            </div>
-            <!-- Utensil Description -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-list prefix black-text"></i>
-                    <textarea id="utensil_description" name="utensil_description" minlength="5" maxlength="200"
-                        class="materialize-textarea validate" required></textarea>
-                    <label for="utensil_description">Utensil Description</label>
-                </div>
-            </div>
-            <!-- Utensil Details -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-utensils prefix black-text"></i>
-                    <input id="utensil_details" name="utensil_details" type="text" class="validate" required>
-                    <label for="utensil_details">Utensil details </label>
-                </div>
-            </div>
-            <!-- Add utensil image -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-upload prefix black-text"></i>
-                    <textarea id="utensil_image" name="utensil_image" minlength="5"
-                        class="materialize-textarea validate" required></textarea>
-                    <label for="utensil_image">Upload Image URL </label>
-                </div>
-            </div>
-            <!-- submit button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <button type="submit" class="btn-large backgroundcolor black-text">
-                        Add Recipe <i class="fas fa-plus-square right"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+<!-- Utensil Name -->
+<div class="row">
+    <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix black-text"></i>
+        <input id="utensil_name" name="utensil_name" minlenght="5" maxlength="50" type="text" class="validate" required>
+        <label for="utensil_name">Utensil Name</label>
     </div>
+</div>
+<!-- Utensil Description -->
+<div class="row">
+    <div class="input-field col s12">
+        <i class="fas fa-list prefix black-text"></i>
+        <textarea id="utensil_description" name="utensil_description" minlength="5" maxlength="200"
+            class="materialize-textarea validate" required></textarea>
+        <label for="utensil_description">Utensil Description</label>
+    </div>
+</div>
+<!-- Utensil Details -->
+<div class="row">
+    <div class="input-field col s12">
+        <i class="fas fa-utensils prefix black-text"></i>
+        <input id="utensil_details" name="utensil_details" type="text" class="validate" required>
+        <label for="utensil_details">Utensil details </label>
+    </div>
+</div>
+<!-- Add utensil image -->
+<div class="row">
+    <div class="input-field col s12">
+        <i class="fas fa-upload prefix black-text"></i>
+        <textarea id="utensil_image" name="utensil_image" minlength="5" class="materialize-textarea validate"
+            required></textarea>
+        <label for="utensil_image">Upload Image URL </label>
+    </div>
+</div>
+<!-- submit button -->
+<div class="row">
+    <div class="col s12 center-align">
+        <button type="submit" class="btn-large backgroundcolor black-text">
+            Add Recipe <i class="fas fa-plus-square right"></i>
+        </button>
+    </div>
+</div>
+</form>
+</div>
 
 {% endblock %}

@@ -1,93 +1,95 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h4 class="black-text backgroundcolor center-align">Edit Recipe</h4>
+<!--Page Title -->
+<h4 class="black-text center-align">Edit Recipe 
+    <hr class="backgroundcolor page-underline s8 m8 l8">
+</h4>
 
-    <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
-            <!-- category selection -->
-			<div class="row">
-				<div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix black-text backgroundcolor"></i>
-					    <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled>Choose Category</option>
-                        {% for category in categories %}
-                            {% if category.category_name == recipe.category_name %}
-                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                            {% else %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                    </select>
-					<label for="category_name">Category</label>
-				</div>
-			</div>
-            <!-- Recipe Name -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
-                    <input id="recipe_name" name="recipe_name" minlenght="5" maxlength="50" 
-                    value="{{ recipe.recipe_name }}" type="text" class="validate" required>
-                    <label for="recipe_name">Recipe Name</label>
-                </div>
+
+<div class="row">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <!-- category selection -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix black-text backgroundcolor"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled>Choose Category</option>
+                    {% for category in categories %}
+                    {% if category.category_name == recipe.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <label for="category_name">Category</label>
             </div>
-            <!-- Ingredients -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-list prefix backgroundcolor black-text"></i>
-                    <textarea id="ingredients" name="ingredients" minlength="5" maxlength="200"
-                        class="materialize-textarea validate" required>
+        </div>
+        <!-- Recipe Name -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
+                <input id="recipe_name" name="recipe_name" minlenght="5" maxlength="50" value="{{ recipe.recipe_name }}"
+                    type="text" class="validate" required>
+                <label for="recipe_name">Recipe Name</label>
+            </div>
+        </div>
+        <!-- Ingredients -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-list prefix backgroundcolor black-text"></i>
+                <textarea id="ingredients" name="ingredients" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required>
                     {{- recipe.ingredients -}}
                     </textarea>
-                    <label for="ingredients">Ingredients</label>
-                </div>
+                <label for="ingredients">Ingredients</label>
             </div>
-            <!-- Number Serves -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
-                    <textarea id="serves" name="serves" type="text" 
-                    class="materialize-textarea validate" required>
+        </div>
+        <!-- Number Serves -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-utensils prefix backgroundcolor black-text"></i>
+                <textarea id="serves" name="serves" type="text" class="materialize-textarea validate" required>
                     {{- recipe.serves -}} 
                     </textarea>
-                    <label for="serves">Serves</label>
-                </div>
+                <label for="serves">Serves</label>
             </div>
-            <!-- Method -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
-                    <textarea id="method" name="method" minlength="5" maxlength="250"
-                        class="materialize-textarea validate" required>
+        </div>
+        <!-- Method -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
+                <textarea id="method" name="method" minlength="5" maxlength="250" class="materialize-textarea validate"
+                    required>
                         {{- recipe.method -}}
                     </textarea>
-                    <label for="method">Method</label>
-                </div>
+                <label for="method">Method</label>
             </div>
-            <!-- Add image -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-upload prefix black-text"></i>
-                    <textarea id="image" name="image" minlength="5"
-                        class="materialize-textarea validate" required>
+        </div>
+        <!-- Add image -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-upload prefix black-text"></i>
+                <textarea id="image" name="image" minlength="5" class="materialize-textarea validate" required>
                         {{- recipe.recipe_image -}}
                     </textarea>
-                    <label for="image">Upload Image URL </label>
-                </div>
+                <label for="image">Upload Image URL </label>
             </div>
-            <!-- submit button -->
-            <div class="row">
-                <div class="col s12 center-align">
-                    <!-- cancel button -->
-                    <a href="{{ url_for('add_recipe') }}" class="btn-large backgroundcolor black-text">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-                    <button type="submit" class="btn-large backgroundcolor black-text">
-                        Edit <i class="fas fa-edit right"></i>
-                    </button>
-                </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <!-- cancel button -->
+                <a href="{{ url_for('add_recipe') }}" class="btn-large backgroundcolor black-text">
+                    Cancel <i class="fas fa-times-circle right"></i>
+                </a>
+                <button type="submit" class="btn-large backgroundcolor black-text">
+                    Edit <i class="fas fa-edit right"></i>
+                </button>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

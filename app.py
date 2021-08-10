@@ -209,10 +209,6 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
 # Change true to false before submitting 
 
 
@@ -227,7 +223,7 @@ def utensils():
     return render_template("utensils.html", utensils=utensils)
 
 
-@app.route("/utensil/<utensilid>")
+@app.route("/utensil/<utensil_id>")
 def utensil(utensil_id):
     utensils = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
     return render_template("utensil.html", utensils=utensils)
@@ -282,3 +278,10 @@ def edit_utensil(utensil_id):
 
     utensils = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
     return render_template("edit_utensil.html", utensils=utensils)
+
+
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
