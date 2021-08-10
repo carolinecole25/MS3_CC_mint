@@ -221,7 +221,6 @@ if __name__ == "__main__":
 # Credit: code taken from task manager project and adapted to fit utensils section of project.
 
 # Cooking utensils 
-
 @app.route("/utensils")
 def utensils():
     utensils = list(mongo.db.utensils.find())
@@ -235,7 +234,7 @@ def utensil(utensil_id):
 
 
 # Search for utensils 
-@app.route("/search_utensils", methods=["GET", "POST"])
+@app.route("/search_utensil", methods=["GET", "POST"])
 def search_utensil():
     query = request.form.get("query")
     utensil = list(mongo.db.utensils.find({"$text": {"$search": query}}))
