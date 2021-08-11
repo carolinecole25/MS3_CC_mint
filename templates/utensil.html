@@ -2,31 +2,28 @@
 {% block content %}
 
 <!-- Page Title -->
-<h4 class="black-text center-align">Utensil
+<h4 class="black-text center-align">Utensil Details
     <hr class="backgroundcolor page-underline s8 m8 l8">
 </h4>
 
 <!-- Utensil -->
 
 <div class="row">
-    <div class="col s7 push-s5">
+    <div class="col s12 m12 l12">
         <img class="image img-thumbnail image_utensil" src="{{ utensil.utensil_image }}" alt="utensil image">
         {{ utensil_image }}
     </div>
-    <div class="col s5 pull-s7">
+    <div class="col s12 m12 l12">
         <ul>
             <li><h5>{{ utensil.utensil_name }}</h5></li>
+            <br>
             <li><b>Description:</b></li>
             <li>{{ utensil.utensil_description }}</li>
-        </ul>
-</div>
-<div class="row">
-    <div class="col s12 center-align">
-        <ul>
+            <br>
             <li><b>Details:</b></li>
             <li>{{ utensil.utensil_details }}</li>
             </ul>
-    </div>
+        </ul>
 </div>
 
 

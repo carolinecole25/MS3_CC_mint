@@ -34,15 +34,18 @@ body {
     line-height: 42px;
 }
 
-/* recipe.html */
 
-.image {
-    width: 25vh;
-    height: auto;
-}
-
+/* utensil.html */
 .image_utensil {
-    width: 80vh;
+    width: 500px;
     height: auto;
 }
+
+/* Buttons utensil.htm and recipes.html*/
+.btn-view {
+    background-color: #fceeedfd;
+}
+
+
+
 

@@ -34,15 +34,16 @@
           <div class="card hoverable">
             <div class="card-image">
                     <img src="{{ utensil.utensil_image }}" alt="{{ utensil.utensil_name }}">
-                <span class="card-title">{{ utensil.utensil_name }}</span>
             </div>
             <div class="card-content">
+              <span class="card-title">{{ utensil.utensil_name }}</span>
               <p>
                 {{- utensil.utensil_details -}}
               </p>
             </div>
             <div class="card-action">
-              <a href="{{url_for('utensil', utensil_id=utensil._id)}}">View Utensil</a>
+              <a href="{{url_for('utensil', utensil_id=utensil._id)}}" 
+              class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
             </div>
           </div>
         </div>
@@ -50,8 +51,8 @@
     {% endfor %}
 </div>
 {% else %}
-    <b><h4 class="text-darken-4 center-align">
-        <i class="fas fa-frown text-darken-4"></i> No Utensils Found</h4></b>
+    <b><h4 class="center-align">
+        <i class="fas fa-frown"></i> No Utensils Found</h4></b>
 {% endif %}
 
 
