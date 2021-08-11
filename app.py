@@ -238,7 +238,8 @@ def utensil(utensil_id):
 def search_utensil():
     query = request.form.get("query")
     utensils = list(mongo.db.utensils.find({"$text": {"$search": query}}))
-    return render_template("utensils.hmtl", utensils=utensils, result=result)
+    return render_template("utensils.hmtl", utensils=utensils)
+
 
 
 # Add Utensil
