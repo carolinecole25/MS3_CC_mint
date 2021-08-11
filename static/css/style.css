@@ -25,27 +25,43 @@ body {
     line-height: 2;
 }
 
-.btn-small {
-    margin: 5px;
-}
 
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
 }
 
+/* Header */
 
-/* utensil.html */
-.image_utensil {
-    width: 500px;
-    height: auto;
+.page-underline {
+    height: 1px;
+    margin-top: 15px;
 }
 
-/* Buttons utensil.htm and recipes.html*/
+
+/* Buttons */
 .btn-view {
     background-color: #fceeedfd;
 }
 
+.btn-small {
+    margin: 5px;
+}
 
+/* images */
+
+.card .card-image img {
+    width: 100px;
+}
+
+.recipe-img {
+    width: 500px;
+    height: auto;
+}
+
+.image_utensil {
+    width: 500px;
+    height: auto;
+}
 
 

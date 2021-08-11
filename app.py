@@ -29,6 +29,12 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/recipe/<recipe_id>")
+def recipesingle(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("recipe.html", recipe=recipe)
+
+
 # Search for Recipes
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -247,7 +253,7 @@ def add_utensil():
         }
         mongo.db.utensils.insert_one(utensil)
         flash("You're utensil was successfully added")
-        return redirect(url_for("utensils"))
+        return redirect(url_for("add_utensil"))
 
     name = mongo.db.utensils.find().sort("utensil_name", 1)
     return render_template("add_utensil.html", name=name)

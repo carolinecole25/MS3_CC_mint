@@ -3,24 +3,25 @@
 
 <!-- Page Title -->
 <h4 class="black-text center-align">Recipe
-    <hr class="backgroundcolor page-underline s8 m8 l8">
+    <p class="page-underline grey lighten-1 s8 m8 l8"></p>
 </h4>
 
 <!-- Utensil -->
 
 <div class="row">
-    <div class="col s7 push-s5">
-        <img class="image img-thumbnail" src="{{ recipe.image }}" alt="utensil image">
-        {{ recipe.recipe_image }}
+    <div class="col s12 m12 l12">
+        <img class="recipe-img image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
+        {{ recipe_image }}
     </div>
-    <div class="col s5 pull-s7">
+    <div class="col s12 m12 l12">
         <ul>
-            <strong>{{ recipe.category_name }} : {{ recipe.recipe_name }} </strong>
+            <h5>{{ recipe.category_name }} : {{ recipe.recipe_name }} </h5>
                 <ul>
-                    <li>Serves</li>
+                    <br>
+                    <li>Serves:</li>
                     <li>{{ recipe.serves }}</li>
                 </ul>
-                <ul>Ingredients
+                <ul>Ingredients:
                     {% set split_list = recipe.ingredients.split(', ') %}
                     {% for ingredient in split_list %}
                     <li>
@@ -30,7 +31,7 @@
                 </ul>
 </div>
 <div class="row">
-    <div class="col s12 center-align"><p class="flow-text"><p>Method: {{ recipe.method }}</p>
+    <div class="col s12 m12 l122"><p class="flow-text"><p>Method: {{ recipe.method }}</p>
         <p><em>Created by: {{ recipe.created_by }}</em></p>
 </div>
 
