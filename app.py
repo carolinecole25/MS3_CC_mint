@@ -39,6 +39,7 @@ def recipesingle(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    print(query)
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
@@ -237,8 +238,9 @@ def utensil(utensil_id):
 @app.route("/search_utensil", methods=["GET", "POST"])
 def search_utensil():
     query = request.form.get("query")
+    print(query)
     utensils = list(mongo.db.utensils.find({"$text": {"$search": query}}))
-    return render_template("utensils.hmtl", utensils=utensils)
+    return render_template("utensils.html", utensils=utensils)
 
 
 
