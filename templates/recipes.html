@@ -48,7 +48,8 @@
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                     class="fas fa-edit recipe-btn btn-small btn"> Edit</a>
                 <a href="#delete-modal-{{ recipe._id }}"
-                    class="red fas fa-trash recipe-btn btn-small btn modal-trigger"> Delete</a>
+                    class="red fas fa-trash recipe-btn btn-small btn modal-trigger"> 
+                    Delete</a>
                 {% endif %}
             </div>
           </div>
@@ -67,7 +68,7 @@
         </div>
     </div>
     {% endfor %}
-    </div>
+    </div> 
 {% else %}
     <b><h4 class="center-align">
         <i class="fas fa-frown"></i> No recipes Found</h4></b>

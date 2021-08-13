@@ -3,54 +3,76 @@
 
 <!-- Page Title -->
 <h4 class="black-text center-align">Utenisls </h4>
-    <p class="grey page-underline s8 m8 l8"></p>
+<p class="grey page-underline s8 m8 l8"></p>
 
 
 <!-- Search bar -->
 <div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search_utensil') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m6">
-                <i class="fas fa-search prefix black-text"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search</label>
-            </div>
-            <div class="col s12 m6">
-                <a href="{{ url_for('utensils') }}" class="red btn text-shadow">Reset</a>
-                <button type="submit" class="btn text-shadow">
-                    <i class="fas fa-search left"></i> Search
-                </button>
-            </div>
-        </div>
-    </form>
+  <form action="{{ url_for('search_utensil') }}" method="post" class="col s12">
+    <div class="row valign-wrapper center-align">
+      <div class="input-field col s12 m6">
+        <i class="fas fa-search prefix black-text"></i>
+        <input type="text" name="query" id="query" minlength="3" class="validate" required>
+        <label for="query">Search</label>
+      </div>
+      <div class="col s12 m6">
+        <a href="{{ url_for('utensils') }}" class="red btn text-shadow">Reset</a>
+        <button type="submit" class="btn text-shadow">
+          <i class="fas fa-search left"></i> Search
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 
 <!-- Utensils -->
 {% if utensils|length > 0 %}
-    <div class="row">
-        {% for utensil in utensils %}
-        <div class="col s12 m6">
-          <div class="card hoverable card">
-            <div class="card-image center-align">
-                    <img src="{{ utensil.utensil_image }}" alt="{{ utensil.utensil_name }}">
-            </div>
-            <div class="card-content">
-              <span class="card-title">{{ utensil.utensil_name }}</span>
-              <p>
-                {{- utensil.utensil_details -}}
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="{{url_for('utensil', utensil_id=utensil._id)}}" 
-              class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
-            </div>
-          </div>
-        </div>
-    {% endfor %}
+<div class="row">
+  {% for utensil in utensils %}
+  <div class="col s12 m6">
+    <div class="card hoverable card">
+      <div class="card-image center-align">
+        <img src="{{ utensil.utensil_image }}" alt="{{ utensil.utensil_name }}">
+      </div>
+      <div class="card-content">
+        <span class="card-title">{{ utensil.utensil_name }}</span>
+        <p>
+          {{- utensil.utensil_details -}}
+        </p>
+      </div>
+      <div class="card-action">
+        <a href="{{url_for('utensil', utensil_id=utensil._id)}}"
+          class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
+        {% if session.user|lower == utensil.created_by|lower %}
+        <a href="{{ url_for('edit_utensil', utensil_id=utensil._id) }}" 
+        class="fas fa-edit btn-small btn"> Edit</a>
+        <a href="#delete-modal-{{ utensil._id }}" class="red fas fa-trash 
+        recipe-btn btn-small btn modal-trigger">
+          Delete</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal popup-->
+  <div id="delete-modal-{{ utensil._id }}" class="modal">
+    <div class="modal-content">
+      <h4>Are you sure want to delete?</h4>
+      <p>This will permanently delete this utensil</p>
+    </div>
+    <div class="modal-footer">
+      <a href="{{ url_for('delete_utensil', utensil_id=utensil._id) }}"
+        class="modal-close waves-effect waves-green btn-flat">Yes</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% else %}
-    <b><h4 class="center-align">
-        <i class="fas fa-frown"></i> No Utensils Found</h4></b>
+<b>
+  <h4 class="center-align">
+    <i class="fas fa-frown"></i> No Utensils Found</h4>
+</b>
 {% endif %}
 
 
