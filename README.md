@@ -99,6 +99,10 @@ The images on the utensils page are of products recommended for cooking.
 * [Google Fonts](https://https://fonts.google.com/) has been used for my fonts.
 * [Font awesome](https://fontawesome.com/) has been used throughout my wesbite.
 * [Materialize](https://materializecss.com/) has been used to help create the layout of this website.
+* [GitHub]() used as primary for my code.
+* [Balsamiq]() used to create wireframes.
+* [Fask]() Used flask as a framework
+* [MongoDB]() used to store data.
 
 
 ## Testing
@@ -185,9 +189,19 @@ Click on the page name to see the result:
 
 ## Deployment
 
+### Requirements 
+1. Python3 to run applications. 
+2. Gitpod or another IDE of your choosing.
+3. MongoDB Atlas account for database development.
+4. PIP to instal all app requirements.
 
 ## How to run this project locally
-
+1. Click the green clone or download button in [Github](ADD LINK HERE **************)
+2. Select clipboard button on the right of the link provided.
+3. In your terminal, type git clone, paste in the previously copies linke and enter.
+4. Create a file .flaskenv and include `FLASK_APP=run.py` and `FLASK_ENV=deveopment`
+5. Install the pip3 with the command `pip -r requirements.txt` in the terminal.
+6. 
 
 ## Credits
 ### HTML
@@ -195,7 +209,7 @@ Click on the page name to see the result:
 2. 
 
 ### CSS
-
+1.
 
 ### Javascript
 1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/).

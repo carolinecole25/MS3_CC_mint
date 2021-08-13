@@ -51,16 +51,7 @@ body {
 /* images */
 
 .card .card-image img {
-    width: 35vh;
-    height: auto;
-    
-}
-
-@media screen and (max-width: 767px){   
-    .card .card-image img{      
-        width: 60%;
-        height: auto;
-    } 
+    object-fit: contain;
 }
 
 .recipe-img {
@@ -77,6 +68,7 @@ body {
     width: 70vh;
     height: auto;
 }
+
 
 @media screen and (max-width: 767px){   
     .image_utensil{      

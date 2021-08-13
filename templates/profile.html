@@ -5,9 +5,6 @@
 <h4 class="black-text center-align">{{ username }}'s Profile</h4>
 <hr class="backgroundcolor page-underline s8 m8 l8">
 
-{% extends "base.html" %}
-{% block content %}
-
 <!-- Search bar -->
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -26,38 +23,39 @@
         </div>
     </form>
 </div>
-{% if session.user|lower == "username"|lower %}
-<!-- Recipes -->
-{% if session.user %}
-    <div class="row">
-        {% for recipe in recipes %}
-        <div class="col s12 m6">
-          <div class="card hoverable">
+
+<!-- Profile -->
+{% if recipes|length > 0 %}
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col s12 m6">
+        {% if session.user|lower == recipe.created_by|lower %}
+        <div class="card hoverable">
             <div class="card-image">
-                <img class="center-algin recipes-image image img-thumbnail" 
-                src="{{ recipe.recipe_image }}" alt="recipe image">
+                <img class="center-algin recipes-image image img-thumbnail" src="{{ recipe.recipe_image }}"
+                    alt="recipe image">
                 {{ recipe.image }}
             </div>
             <div class="card-content">
-              <p class="card-title"><strong>{{ recipe.category_name }}: </strong></p>
-              <p><strong>{{ recipe.recipe_name }}</strong></p>
+                <p class="card-title"><strong>{{ recipe.category_name }}: </strong></p>
+                <p><strong>{{ recipe.recipe_name }}</strong></p>
                 <p>Serves: {{ recipe.serves }}</p>
                 <p><em>Created by: {{ recipe.created_by }}</em></p>
             </div>
             <div class="card-action">
-              <a href="{{url_for('recipesingle', recipe_id=recipe._id)}}" 
-              class="btn btn-view text-shadow backgroundcolor black-text">View Recipe</a>
-              {% if session.user|lower == recipe.created_by|lower %}
+                <a href="{{url_for('recipesingle', recipe_id=recipe._id)}}"
+                    class="btn btn-view text-shadow backgroundcolor black-text">View Recipe</a>
+                {% if session.user|lower == recipe.created_by|lower %}
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                     class="fas fa-edit recipe-btn btn-small btn"> Edit</a>
                 <a href="#delete-modal-{{ recipe._id }}"
                     class="red fas fa-trash recipe-btn btn-small btn modal-trigger"> Delete</a>
-                <!--{% endif %}-->
+                    {% endif %}
             </div>
-          </div>
         </div>
+    </div>
     
-      <!-- Modal popup-->
+    <!-- Modal popup-->
     <div id="delete-modal-{{ recipe._id }}" class="modal">
         <div class="modal-content">
             <h4>Are you sure want to delete?</h4>
@@ -69,15 +67,14 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
         </div>
     </div>
-    {% endif %}
     {% endfor %}
-    </div>
+</div>
 {% else %}
-    <b><h4 class="center-align">
-        <i class="fas fa-frown"></i> No recipes Found</h4></b>
+<b>
+    <h4 class="center-align">
+        <i class="fas fa-frown"></i> No recipes Found</h4>
+</b>
 {% endif %}
 
 
-
-    
 {% endblock %}

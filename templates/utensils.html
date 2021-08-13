@@ -2,9 +2,8 @@
 {% block content %}
 
 <!-- Page Title -->
-<h4 class="black-text center-align">All Utensils
-    <hr class="backgroundcolor page-underline s8 m8 l8">
-</h4>
+<h4 class="black-text center-align">Utenisls </h4>
+    <p class="grey page-underline s8 m8 l8"></p>
 
 
 <!-- Search bar -->
@@ -31,7 +30,7 @@
     <div class="row">
         {% for utensil in utensils %}
         <div class="col s12 m6">
-          <div class="card hoverable">
+          <div class="card hoverable card">
             <div class="card-image center-align">
                     <img src="{{ utensil.utensil_image }}" alt="{{ utensil.utensil_name }}">
             </div>
