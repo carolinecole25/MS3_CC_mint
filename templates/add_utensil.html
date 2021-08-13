@@ -2,12 +2,13 @@
 {% block content %}
 
 <!--Page Title -->
-<h4 class="black-text center-align">Add Utensil
-    <hr class="backgroundcolor page-underline s8 m8 l8">
-</h4>
+<h4 class="black-text center-align">Add Utensil</h4>
+<p class="grey page-underline s8 m8 l8"></p>
+
 
 <!-- Utensil Name -->
 <div class="row">
+    <form class="col s12" method="POST" action="{{ url_for('add_utensil') }}">
     <div class="input-field col s12">
         <i class="fas fa-pencil-alt prefix black-text"></i>
         <input id="utensil_name" name="utensil_name" minlenght="5" maxlength="50" type="text" class="validate" required>

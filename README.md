@@ -186,6 +186,7 @@ Click on the page name to see the result:
 ## Bugs
 1. JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
 2. Utensils Search Box was not working and displaying an error about `$text`. I forgot to add the text index to mongoDB utensils collection so this is why it was not working. 
+3. On the recipes.html and utensils.html page, the card containers I was using from materialize were being distorted by the image sizes. I needed to adjust the image size but not have the images distorted so I used `object-fit: contain;` in CSS to fix this issue and added a height restriction. This worked well and now all the containers are equal sizes. 
 
 ## Deployment
 
