@@ -51,17 +51,37 @@ body {
 /* images */
 
 .card .card-image img {
-    width: 100px;
+    width: 35vh;
+    height: auto;
+    
+}
+
+@media screen and (max-width: 767px){   
+    .card .card-image img{      
+        width: 60%;
+        height: auto;
+    } 
 }
 
 .recipe-img {
-    width: 500px;
+    width: 50vh;
     height: auto;
+}
+@media screen and (max-width: 767px){   
+    .recipe-img{      
+        width: 70%;
+    } 
 }
 
 .image_utensil {
-    width: 500px;
+    width: 70vh;
     height: auto;
+}
+
+@media screen and (max-width: 767px){   
+    .image_utensil{      
+        width: 70%;
+    } 
 }
 
 
