@@ -245,7 +245,6 @@ def search_utensil():
     return render_template("utensils.html", utensils=utensils)
 
 
-
 # Add Utensil
 @app.route("/add_utensil", methods=["GET", "POST"])
 def add_utensil():
@@ -254,7 +253,8 @@ def add_utensil():
             "utensil_name": request.form.get("utensil_name"),
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
-            "utensil_image": request.form.get("utensil_image")
+            "utensil_image": request.form.get("utensil_image"),
+            "utensil_created_by": session["utensil_user"]
         }
         mongo.db.utensils.insert_one(utensil)
         flash("You're utensil was successfully added")
@@ -276,17 +276,18 @@ def delete_utensil(utensil_id):
 @app.route("/edit_utensil/<utensil_id>", methods=["GET", "POST"])
 def edit_utensil(utensil_id):
     if request.method == "POST":
-        utensil = {
+        submit_utensil = {
             "utensil_name": request.form.get("utensil_name"),
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
-            "utensil_image": request.form.get("utensil_image")
+            "utensil_image": request.form.get("utensil_image"),
+            "utensil_created_by": session["utensil_user"]
         }
         mongo.db.utensils.update({"_id": ObjectId(utensil_id)}, utensil)
         flash("You're utensil was successfully updated")
 
-    utensils = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
-    return render_template("edit_utensil.html", utensils=utensils)
+    utensil = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
+    return render_template("edit_utensil.html", utensil=utensil)
 
 
 

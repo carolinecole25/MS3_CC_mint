@@ -39,11 +39,13 @@
         <p>
           {{- utensil.utensil_details -}}
         </p>
+        <br>
+        <p><em>Created by: {{ utensil.untensil_created_by }}</em></p>
       </div>
       <div class="card-action">
         <a href="{{url_for('utensil', utensil_id=utensil._id)}}"
           class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
-        {% if session.user|lower == utensil.created_by|lower %}
+        {% if session.utensil_user|lower == utensil.utesnil_created_by|lower %}
         <a href="{{ url_for('edit_utensil', utensil_id=utensil._id) }}" 
         class="fas fa-edit btn-small btn"> Edit</a>
         <a href="#delete-modal-{{ utensil._id }}" class="red fas fa-trash 
