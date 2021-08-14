@@ -48,6 +48,7 @@ body {
     margin: 5px;
 }
 
+
 /* images */
 
 .card .card-image img {
@@ -60,6 +61,7 @@ body {
     width: 50vh;
     height: auto;
 }
+
 @media screen and (max-width: 767px){   
     .recipe-img{      
         width: 70%;
