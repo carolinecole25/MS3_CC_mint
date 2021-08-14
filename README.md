@@ -203,33 +203,74 @@ Click on the page name to see the result:
 3. In your terminal, type git clone, paste in the previously copies linke and enter.
 4. Create a file .flaskenv and include `FLASK_APP=run.py` and `FLASK_ENV=deveopment`
 5. Install the pip3 with the command `pip -r requirements.txt` in the terminal.
-6. 
+6. Create a free [MongoDB](https://cloud.mongodb.com/) account and create a database.
+7. Create the below collections:
+    1. categories 
+        * _id: `<ObjectId>`
+        * category_name: `<string>`
+    2. recipes
+        * _id: `<ObjectId>`
+        * category_name: `<string>`
+        * recipe_name: `<string>`
+        * ingredients: `<string>`
+        * serves: `<string>`
+        * method: `<string>`
+        * created_by: `<string>`
+        * recipe_image: `<string>`
+    3. users 
+        * _id: `<ObjectId>`
+        * username: `<string>`
+        * password: `<string>`
+    4. utensils
+        * _id: `<ObjectId>`
+        * utensil_name: `<string>`
+        * utensil_description: `<string>`
+        * utensil_details: `<string>`
+        * utensil_image: `<string>`
+        * untensil_created_by: `<string>`
+8. You should now be able to run this application using flask run. 
+
+Deployment to Heroku
+1. Create a requirements.txt file by `typing pip3 freeze --local > requirements.txt` into the terminal line.
+2. Create a Procfile by typing `echo web: python app.py > Procile`.
+3. `git add -A`, `git commit -m ""` and `git push` these changes.
+4. Navigate to Heruko.
+5. Create new app and give it a name.
+6. Choose the region that is closest to you.
+7. Go to Deploy tab and choose Github (if you are using).
+8. Search the correct repsoitory and connect.
+9. Go to Heroku settings and navigate to config vars and set the following:
+    * IP = 0.0.0.0
+    * MONGO_DBNAME = [Name of MongoDB]
+    * MONGO_URI = `mongodb+srv://:@<cluster_name>-qtxun.mongodb.net <database_name>?retryWrites=true&w=majority `
+    * PORT = 5000
+    * SECRET_KEY = [Secret key]
+10. Go to the Deploy tab and Deploy Branch, ensuring that the master branch is selected.
 
 ## Credits
 ### HTML
 1. Code taken from [Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) tutorial videos to help with page layouts and linking pages for base.html, categories.html, add_category.html, add_recipe.html, edit_category.html, edit_recipe.html, login.html, register.html, profile.html, recipes.html. The video tutorials helped guide me through writing my code but adapting it to how I wanted my website to look. 
-2. 
+2. Pay layouts taken from [Materialize](https://materializecss.com/) and with colours and screen sizes.
 
 ### CSS
-1.
+1. No references, all written by myself. 
 
 ### Javascript
 1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/).
 2. Code for select dropdown taken from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js).
-3.
 
 ### Python 
-1. Code for  taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase).
+1. Code for project taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) and edited to fit projects needs.
 2. The code for ingredients I wanted to pull through as a list instead of a line of each. I used help from [Kite](https://www.kite.com/python/answers/how-to-get-the-split-a-string-with-a-jinja2-template-in-python) to fix this issue.
 
 ### Media
-1. Image for cornflake cakes taken from [Marmalade and Me](https://marmaladeandme.com/chocolate-cornflake-cakes/).
-2. Image for risotto taken from [Delish](https://www.delish.com/cooking/recipe-ideas/a29786303/risotto-rice-recipe/).
-3. Image for Chocolate Cookie taken from [Joanne Eats Well with Others](https://joanne-eatswellwithothers.com/2019/11/double-and-by-double-i-mean-triple-chocolate-cookies.html).
-4.
+1. Images for recipes and Utensils taken from [Google images](https://www.google.co.uk/imghp?hl=en&ogbl) and opened in new tab to get the URL.
 
 ### Text 
-
+1. Text for recipes taken from [BBC Food](https://www.bbc.co.uk/food).
+2. Text for utensils taken from [Wikipedia](https://en.wikipedia.org/wiki/Main_Page).
 
 
 ### Acknowledgements 
+1. Tutor Support has helped out with a few sticky issues by guiding my in the write direction. Finding out a bug / code issue is very satisfying and I was able to find a lot of problems myself without too much support.
+2. Styling for my website is inspirated by [Sarah's Day](https://www.sarahsday.com/)
