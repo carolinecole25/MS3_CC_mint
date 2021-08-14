@@ -254,7 +254,6 @@ def add_utensil():
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
             "utensil_image": request.form.get("utensil_image"),
-            "utensil_created_by": session["utensil_user"]
         }
         mongo.db.utensils.insert_one(utensil)
         flash("You're utensil was successfully added")
@@ -281,14 +280,12 @@ def edit_utensil(utensil_id):
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
             "utensil_image": request.form.get("utensil_image"),
-            "utensil_created_by": session["utensil_user"]
         }
-        mongo.db.utensils.update({"_id": ObjectId(utensil_id)}, utensil)
-        flash("You're utensil was successfully updated")
+        mongo.db.utensils.update({"_id": ObjectId(utensil_id)}, submit_utensil)
+        flash("Utensil was successfully updated")
 
     utensil = mongo.db.utensils.find_one({"_id": ObjectId(utensil_id)})
     return render_template("edit_utensil.html", utensil=utensil)
-
 
 
 if __name__ == "__main__":
