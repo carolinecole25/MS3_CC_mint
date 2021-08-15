@@ -150,10 +150,10 @@ Click on the page name to see the result:
 [Google lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practices and SEO of the website.
 
 ### Javascript
-[JS Hint](https://jshint.com/) was used to test the Javascript code. All pages passed with zerp errors, click on the pages to see the results:
+[JS Hint](https://jshint.com/) was used to test the Javascript code. All pages passed with zero errors, click on the pages to see the results:
 
 ### Python
-
+No Python errors. 
 
 ### Testing client stories from UX section 
 

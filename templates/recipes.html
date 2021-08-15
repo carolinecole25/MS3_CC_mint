@@ -44,6 +44,7 @@
             <div class="card-action">
               <a href="{{url_for('recipesingle', recipe_id=recipe._id)}}" 
               class="btn btn-view text-shadow backgroundcolor black-text">View Recipe</a>
+              <br>
               {% if session.user|lower == recipe.created_by|lower %}
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                     class="fas fa-edit recipe-btn btn-small btn"> Edit</a>
