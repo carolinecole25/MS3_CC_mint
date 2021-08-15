@@ -1,55 +1,54 @@
-{% extends "base.html" %}
-{% block content %}
+    {% extends "base.html" %}
+    {% block content %}
+    <!--Page Title -->
+    <h4 class="black-text center-align">Add Utensil</h4>
+    <p class="grey page-underline s8 m8 l8"></p>
 
-<!--Page Title -->
-<h4 class="black-text center-align">Add Utensil</h4>
-<p class="grey page-underline s8 m8 l8"></p>
 
+    <!-- Utensil Name -->
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('add_utensil') }}">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix black-text"></i>
+                <input id="utensil_name" name="utensil_name" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="utensil_name">Utensil Name</label>
+            </div>
+            <!-- Utensil Description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list prefix black-text"></i>
+                    <textarea id="utensil_description" name="utensil_description" minlength="5" maxlength="200"
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="utensil_description">Utensil Description</label>
+                </div>
+            </div>
+            <!-- Utensil Details -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils prefix black-text"></i>
+                    <input id="utensil_details" name="utensil_details" type="text" class="validate" required>
+                    <label for="utensil_details">Utensil details </label>
+                </div>
+            </div>
+            <!-- Add utensil image -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-upload prefix black-text"></i>
+                    <textarea id="utensil_image" name="utensil_image" minlength="5" class="materialize-textarea validate"
+                        required></textarea>
+                    <label for="utensil_image">Upload Image URL </label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large backgroundcolor black-text">
+                        Add Utensil <i class="fas fa-plus-square right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-<!-- Utensil Name -->
-<div class="row">
-    <form class="col s12" method="POST" action="{{ url_for('add_utensil') }}">
-    <div class="input-field col s12">
-        <i class="fas fa-pencil-alt prefix black-text"></i>
-        <input id="utensil_name" name="utensil_name" minlenght="5" maxlength="50" type="text" class="validate" required>
-        <label for="utensil_name">Utensil Name</label>
-    </div>
-</div>
-<!-- Utensil Description -->
-<div class="row">
-    <div class="input-field col s12">
-        <i class="fas fa-list prefix black-text"></i>
-        <textarea id="utensil_description" name="utensil_description" minlength="5" maxlength="200"
-            class="materialize-textarea validate" required></textarea>
-        <label for="utensil_description">Utensil Description</label>
-    </div>
-</div>
-<!-- Utensil Details -->
-<div class="row">
-    <div class="input-field col s12">
-        <i class="fas fa-utensils prefix black-text"></i>
-        <input id="utensil_details" name="utensil_details" type="text" class="validate" required>
-        <label for="utensil_details">Utensil details </label>
-    </div>
-</div>
-<!-- Add utensil image -->
-<div class="row">
-    <div class="input-field col s12">
-        <i class="fas fa-upload prefix black-text"></i>
-        <textarea id="utensil_image" name="utensil_image" minlength="5" class="materialize-textarea validate"
-            required></textarea>
-        <label for="utensil_image">Upload Image URL </label>
-    </div>
-</div>
-<!-- submit button -->
-<div class="row">
-    <div class="col s12 center-align">
-        <button type="submit" class="btn-large backgroundcolor black-text">
-            Add Utensil <i class="fas fa-plus-square right"></i>
-        </button>
-    </div>
-</div>
-</form>
-</div>
-
-{% endblock %}
+    {% endblock %}

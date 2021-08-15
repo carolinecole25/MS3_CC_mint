@@ -1,25 +1,25 @@
-{% extends "base.html" %}
-{% block content %}
+    {% extends "base.html" %}
+    {% block content %}
 
-<!-- Page Title -->
-<h4 class="black-text center-align">Edit Utensil</h4>
-<p class="grey page-underline s8 m8 l8"></p>
+    <!-- Page Title -->
+    <h4 class="black-text center-align">Edit Utensil</h4>
+    <p class="grey page-underline s8 m8 l8"></p>
 
     <!-- utensil name -->
-        <div class="row">
-            <form class="col s12" method="POST" action="{{ url_for('edit_utensil', utensil_id=utensil._id) }}">
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('edit_utensil', utensil_id=utensil._id) }}">
             <div class="input-field col s12">
-            <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
-            <input id="utensil_name" name="utensil_name" minlenght="5" maxlength="50" 
-            value="{{ utensil.utensil_name }}" type="text" class="validate" required>
-            <label for="utensil_name">Name</label>
+                <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
+                <input id="utensil_name" name="utensil_name" minlength="5" maxlength="50" 
+                value="{{ utensil.utensil_name }}" type="text" class="validate" required>
+                <label for="utensil_name">Name</label>
             </div>
             <!-- utensil_description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix backgroundcolor black-text"></i>
-                    <input id="utensil_description" name="utensil_description" minlenght="5" maxlength="50" 
-                    value="{{ utensil.utensil_description }}" type="text" class="validate" required>
+                    <input id="utensil_description" name="utensil_description" minlength="5" maxlength="50"
+                        value="{{ utensil.utensil_description }}" type="text" class="validate" required>
                     <label for="utensil_description">Description</label>
                 </div>
             </div>
@@ -29,20 +29,20 @@
                     <i class="fas fa-list prefix backgroundcolor black-text"></i>
                     <textarea id="utensil_details" name="utensil_details" minlength="5"
                         class="materialize-textarea validate" required>
-                    {{- utensil.utensil_details -}}
-                    </textarea>
+                        {{- utensil.utensil_details -}}
+                        </textarea>
                     <label for="utensil_details">Details</label>
                 </div>
             </div>
-            
+
             <!-- Add utensil image -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-upload prefix black-text"></i>
-                    <textarea id="utensil_image" name="utensil_image" minlength="5"
-                        class="materialize-textarea validate" required>
-                        {{- utensil.utensil_image -}}
-                    </textarea>
+                    <textarea id="utensil_image" name="utensil_image" minlength="5" 
+                    class="materialize-textarea validate" required>
+                            {{- utensil.utensil_image -}}
+                        </textarea>
                     <label for="utensil_image">Upload Image URL </label>
                 </div>
             </div>
@@ -50,8 +50,8 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <!-- cancel button -->
-                    <a href="{{ url_for('utensils') }}" class="btn-large backgroundcolor black-text">
-                        Cancel <i class="fas fa-times-circle right"></i>
+                    <a href="{{ url_for('utensils') }}" class="btn-large backgroundcolor 
+                    black-text">Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <button type="submit" class="btn-large backgroundcolor black-text">
                         Edit <i class="fas fa-edit right"></i>
@@ -61,4 +61,4 @@
         </form>
     </div>
 
-{% endblock %}
+    {% endblock %}

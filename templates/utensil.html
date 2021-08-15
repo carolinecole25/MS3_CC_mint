@@ -1,30 +1,32 @@
-{% extends "base.html" %}
-{% block content %}
+    {% extends "base.html" %}
+    {% block content %}
 
-<!-- Page Title -->
-<h4 class="black-text center-align">Utensil Details</h4>
-<p class="grey page-underline s8 m8 l8"></p>
+    <!-- Page Title -->
+    <h4 class="black-text center-align">Utensil Details</h4>
+    <p class="grey page-underline s8 m8 l8"></p>
 
-<!-- Utensil -->
+    <!-- Utensil -->
 
-<div class="row">
-    <div class="col s12 m12 l12">
-        <img class="image img-thumbnail image_utensil" src="{{ utensil.utensil_image }}" alt="utensil image">
-        {{ utensil_image }}
-    </div>
-    <div class="col s12 m12 l12">
-        <ul>
-            <li><h5>{{ utensil.utensil_name }}</h5></li>
-            <br>
-            <li><b>Description:</b></li>
-            <li>{{ utensil.utensil_description }}</li>
-            <br>
-            <li><b>Details:</b></li>
-            <li>{{ utensil.utensil_details }}</li>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <img class="image img-thumbnail image_utensil" src="{{ utensil.utensil_image }}" alt="utensil image">
+            {{ utensil_image }}
+        </div>
+        <div class="col s12 m12 l12">
+            <ul>
+                <li>
+                    <h5>{{ utensil.utensil_name }}</h5>
+                </li>
             </ul>
-        </ul>
-</div>
-
-
+            <ul>
+                <li>Description:</li>
+                <li>{{ utensil.utensil_description }}</li>
+            </ul>
+            <ul>
+                <li>Details:</li>
+                <li>{{ utensil.utensil_details }}</li>
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

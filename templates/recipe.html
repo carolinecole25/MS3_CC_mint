@@ -1,39 +1,39 @@
-{% extends "base.html" %}
-{% block content %}
+    {% extends "base.html" %}
+    {% block content %}
 
-<!-- Page Title -->
-<h4 class="black-text center-align">Recipe</h4>
-<p class="grey page-underline s8 m8 l8"></p>
+    <!-- Page Title -->
+    <h4 class="black-text center-align">Recipe</h4>
+    <p class="grey page-underline s8 m8 l8"></p>
 
-<!-- Utensil -->
+    <!-- Utensil -->
 
-<div class="row">
-    <div class="col s12 m12 l12">
-        <img class="recipe-img image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
-        {{ recipe_image }}
-    </div>
-    <div class="col s12 m12 l12">
-        <ul>
-            <h5>{{ recipe.category_name }} : {{ recipe.recipe_name }} </h5>
-                <ul>
-                    <br>
-                    <li>Serves:</li>
-                    <li>{{ recipe.serves }}</li>
-                </ul>
-                <ul>Ingredients:
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <img class="recipe-img image img-thumbnail" src="{{ recipe.recipe_image }}" alt="recipe image">
+            {{ recipe_image }}
+        </div>
+        <div class="col s12 m12 l12">
+            <ul>
+                <li><h5>{{ recipe.category_name }} : {{ recipe.recipe_name }} </h5></li>
+            </ul>
+            <ul>
+                <li>Serves: {{ recipe.serves }}</li>
+            </ul>
+            <ul>
+                <li>Ingredients:
                     {% set split_list = recipe.ingredients.split(', ') %}
                     {% for ingredient in split_list %}
-                    <li>
-                        {{ ingredient }}
-                    </li>
+                <li>{{ ingredient }}</li>
                     {% endfor %}
-                </ul>
-</div>
-<div class="row">
-    <div class="col s12 m12 l122"><p class="flow-text"><p>Method: {{ recipe.method }}</p>
-        <p><em>Created by: {{ recipe.created_by }}</em></p>
-</div>
-
-
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l122">
+                <p class="flow-text">
+                    <p>Method: {{ recipe.method }}</p>
+                    <p><em>Created by: {{ recipe.created_by }}</em></p>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

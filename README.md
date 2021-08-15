@@ -135,12 +135,26 @@ The images on the utensils page are of products recommended for cooking.
 
 ## Testing
 ### HTML Validation
-The [W3C Markup Validator Service](https://validator.w3.org/) was used to validate the HTML of the website. 
+The [W3C Markup Validator Service](https://validator.w3.org/) was used to validate the HTML of the website. All pages have no errors. 
 Click on the page to see the results:
+[Home](static/testing/htmlhome.png)
+[Recipe](static/testing/htmlrecipe.png)
+[Add Recipe](static/testing/htmladdrecipe.png)
+[Edit Recipe](static/testing/htmleditrecipe.png)
+[Profile](static/testing/htmlprofile.png), this has to be inputted using code as the url could not be checked.
+[Utensils](static/testing/htmlutensils.png)
+[Utensil](static/testing/htmlutensil.png)
+[Add Utensil](static/testing/htmladdutensil.png)
+[Login](static/testing/htmlhome.png)
+[Edit Utensil](static/testing/htmleditutensil.png)
+[Register](static/testing/htmlregister.png)
+[Categories](static/testing/htmlcategories.png)
+[Add Category](static/testing/htmladdcategory.png)
+[Edit Category](static/testing/htmleditcategory.png)
 
 ### CSS Validation
 The [W3C Validator Service](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS of the website.
-The CSS passed with no errors, click the links to see evidence:
+The CSS passed with no errors, click [here](static/testing/css.png) to see evidence.
 
 ### Accessibility 
 [Wave WebAIM web accessibility valisation](https://wave.webaim.org/) was used to ensure the website met a high level of accessibility and had no errors.
@@ -225,7 +239,7 @@ No Python errors.
 3. MongoDB Atlas account for database development.
 4. PIP to instal all app requirements.
 
-## How to run this project locally
+### How to run this project locally
 1. Click the green clone or download button in [Github](ADD LINK HERE **************)
 2. Select clipboard button on the right of the link provided.
 3. In your terminal, type git clone, paste in the previously copies linke and enter.
@@ -258,7 +272,7 @@ No Python errors.
         * untensil_created_by: `<string>`
 8. You should now be able to run this application using flask run. 
 
-Deployment to Heroku
+### Deployment to Heroku
 1. Create a requirements.txt file by `typing pip3 freeze --local > requirements.txt` into the terminal line.
 2. Create a Procfile by typing `echo web: python app.py > Procile`.
 3. `git add -A`, `git commit -m ""` and `git push` these changes.
