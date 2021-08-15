@@ -1,8 +1,8 @@
 # Primerose Cottage
 
-![Responsive Design](######)
+![Responsive Design](static/testing/mint.png)
 
-[View the deployed website](...)
+[View the deployed website](https://ms3-cc-mint.herokuapp.com/)
 
 ## Table of Content 
 1. [Project Goals](#project-goals)
@@ -12,8 +12,11 @@
     3. [Fonts](#fonts)
     4. [Colours](#colours)
     5. [Wireframes](#wireframes)
-3. [Technologies Used](#technologies-used)
-4. [Testing](#testing)
+3. [Features](#features)
+    1. [Existing Features](#existing-features)
+    2. [Features left to Implement](features-left-to-implement)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
     3. [Accessibility](#accessibility)
@@ -21,10 +24,10 @@
     5. [Javascript](#javascript)
     6. [Python](#python)
     7. [Testing client stories from UX section](#testing-client-stories-from-ux-section)
-5. [Bugs](#bugs)
-6. [Deployment](#deployment)
-7. [How to run this project locally](#how-to-run-this-project-locally)
-8. [Credits](#credits)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [How to run this project locally](#how-to-run-this-project-locally)
+9. [Credits](#credits)
     1. [HTML](#html)
     2. [CSS](#css)
     3. [Javascript](#javascript)
@@ -77,7 +80,6 @@ Mint website will meet users needs by:
 13. As the site owner, I want the website to suit my target customer and adhere to their wants and needs.
 14. As the site owner, I want the website to be professional.
 
-
 ### Design choices 
 I designed this website to have a light pink theme to draw in my target customers. The colour is not too overpowering and leaves the recipes the center of attention on the page. 
 I want the recipes to be the star of the show and everything else to be easy to read, use and works well. 
@@ -90,10 +92,14 @@ The images on the utensils page are of products recommended for cooking.
 * [Home](static/wireframes/home.png)
 * [Login](static/wireframes/login.png)
 * [Register](static/wireframes/register.png)
+* [Recipe](static/wireframes/recipe.png)
 * [Profile](static/wireframes/profile.png)
 * [Add Recipe](static/wireframes/addrecipe.png)
 * [Utensils](static/wireframes/utensils.png)
+* [Utensil](static/wireframes/utensil.png)
 * [Edit Recipe](static/wireframes/editrecipe.png)
+* [Categories](static/wireframes/categories.png)
+* [Add Category](static/wireframes/addcategory.png)
 
 ## Technologies Used 
 * [Google Fonts](https://https://fonts.google.com/) has been used for my fonts.
@@ -104,6 +110,28 @@ The images on the utensils page are of products recommended for cooking.
 * [Fask]() Used flask as a framework
 * [MongoDB]() used to store data.
 
+## Features
+### Existing Features 
+* The website will open displaying the Home, Login and Register page.
+* Once the user has logged in or registered they are able to view all pages.
+* The homeapge shows all recispes added by all users.
+* If the user created a recipe, there is edit or delete functionality which will only appear on their recipes.
+* The recipes have a 'view recipe' button which allows the user to select and be taken through to view the recipe.
+* The use is able to search for recipes.
+* Add recipe page is somewhere a user can go to add a recipe.
+* The profile page pull through a list of recipes the user created.
+* The use is able to search for recipes.
+* There is a utensils page which the user if added these will be able to edit and delete.
+* The utenisls have a button 'view utensil' which will take the user through to see utensil information.
+* The use is able to search for utensils.
+* The add utensisl page allows users to add utensils to the utensils page.
+* The categories page is only visible to the 'admin' user. This displays a list of all categories and the admin can add, edit and delete the categories.
+* Pressing logout will log the user out on the menu bar will.
+
+### Features left to implements
+* I would like users to to able to upload images from their phone or computer instead of inserting a URL.
+* I would like each recipe to have a comment section.
+* I would like to add link to social media page for the website.
 
 ## Testing
 ### HTML Validation
