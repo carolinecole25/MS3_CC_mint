@@ -52,6 +52,10 @@ body {
     text-transform: none;
 }
 
+.btn-small {
+    margin: 0;
+}
+
 @media screen and (max-width: 767px){ 
     .btn, .btn-large, .btn-small, .btn-flat .search-btn {
         font-size: 75%;
