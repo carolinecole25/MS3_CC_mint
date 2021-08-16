@@ -8,6 +8,11 @@ body {
 
 /* navigation bar  */
 
+nav .brand-logo {
+    margin-left: 10px;
+    text-transform: lowercase;
+}
+
 .backgroundcolor {
     background: #fceeedfd;
 }
