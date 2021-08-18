@@ -162,8 +162,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 [JS Hint](https://jshint.com/) was used to test the Javascript code. Passed with zero errors select [here](static/testing/js.png) for evidence.
 
 ### Python
-No Python errors. 
-http://pep8online.com/
+[Pep 8](http://pep8online.com/) used to check for errors. No errors occurred in the code, the only errors and warning are from comments. See [here](static/testing/pep8.png) for evidence.
 
 ### Testing client stories from UX section 
 

@@ -11,7 +11,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-# Credit: Code taken from Task Manger (linked in README.md) and edited to suit project needs.
+# Credit: Code taken from Task Manger (linked in README.md) and edited.
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -74,27 +74,29 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        #check user is already in db
+        # check user is already in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
+
         if existing_user:
-            #ensure passed word matches 
+            # ensure passed word matches 
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(
-                    request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["user"]))
-                
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
+           
             else:
-                #invalid password match
+                # invalid password match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
             # username doesnt exist
-            flash("Incorrect username and/or Password")
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -107,25 +109,28 @@ def profile(username):
         {"username": session["user"]})["username"]
     recipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
     return render_template("profile.html", username=username, recipes=recipes)
-    
+
     if session["user"]:
         return render_template("profile.html", username=username)
-    
+
     return redirect(url_for("login"))
 
 
 # Logout
 @app.route("/logout")
 def logout():
-    #remove user from session cookies
+    # Remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
-# Add Recipe 
+#Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """ 
+        Data linked to mongodb to store
+    """
     if request.method == "POST":
         recipe = {
             "category_name": request.form.get("category_name"),
@@ -162,7 +167,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template("edit_recipe.html", 
+            recipe=recipe, categories=categories)
 
 
 # Delete Recipe 
@@ -222,7 +228,6 @@ def delete_category(category_id):
 
 # --------------- Utensils
 
-# Credit: code taken from task manager project and adapted to fit utensils section of project.
 
 # Cooking utensils 
 @app.route("/utensils")
