@@ -240,6 +240,7 @@ def utensil(utensil_id):
 # Search for utensils 
 @app.route("/search_utensil", methods=["GET", "POST"])
 def search_utensil():
+
     query = request.form.get("query")
     print(query)
     utensils = list(mongo.db.utensils.find({"$text": {"$search": query}}))

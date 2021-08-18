@@ -42,7 +42,6 @@
           <div class="card-action">
             <a href="{{url_for('utensil', utensil_id=utensil._id)}}"
               class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
-            <br>
             {% if session.utensil_user|lower == utensil.utensil_created_by|lower %}
             <a href="{{ url_for('edit_utensil', utensil_id=utensil._id) }}" 
             class="fas fa-edit btn-small btn"> Edit</a>
