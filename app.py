@@ -56,7 +56,7 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-
+        # register user and store data in mongo
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
@@ -79,7 +79,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # ensure passed word matches 
+            # ensure passed word matches user
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
@@ -128,9 +128,7 @@ def logout():
 #Add Recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    """ 
-        Data linked to mongodb to store
-    """
+    # User input linked to mongodb to store
     if request.method == "POST":
         recipe = {
             "category_name": request.form.get("category_name"),
@@ -152,6 +150,7 @@ def add_recipe():
 # Edit Recipe 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    # Pulls through data inputted to the edit page from mongoDB
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
@@ -282,6 +281,7 @@ def delete_utensil(utensil_id):
 # Edit Utensil
 @app.route("/edit_utensil/<utensil_id>", methods=["GET", "POST"])
 def edit_utensil(utensil_id):
+    # Pulls data inputted from mongoDB 
     if request.method == "POST":
         submit_utensil = {
             "utensil_name": request.form.get("utensil_name"),

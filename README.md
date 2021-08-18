@@ -104,10 +104,11 @@ The images on the utensils page are of products recommended for cooking.
 * [Google Fonts](https://https://fonts.google.com/) has been used for my fonts.
 * [Font awesome](https://fontawesome.com/) has been used throughout my wesbite.
 * [Materialize](https://materializecss.com/) has been used to help create the layout of this website.
-* [GitHub]() used as primary for my code.
-* [Balsamiq]() used to create wireframes.
-* [Fask]() Used flask as a framework
-* [MongoDB]() used to store data.
+* [GitHub](https://github.com/) used as primary for my code.
+* [Balsamiq](https://balsamiq.com/) used to create wireframes.
+* [Fask](https://flask.palletsprojects.com/en/2.0.x/) Used flask as a framework
+* [MongoDB](https://www.mongodb.com/) used to store data.
+* [Favicon](https://favicon.io/) used to my favicon.
 
 ## Features
 ### Existing Features 
@@ -168,7 +169,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 
 #### Site Users
 1. The ability to easily use and navigate the website.
-    1.  There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
+    1. There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
 
 2. All recipes to be displaying effectively and is userfriendly.
     1. All recipes appear on the recipe.html (home) page with all information.
