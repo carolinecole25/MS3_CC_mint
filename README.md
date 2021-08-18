@@ -58,7 +58,6 @@ Mint website will meet users needs by:
 4. All pages to be functioning properly 
 5. The site to be fully responsive.
 
-
 ## User Experience
 ### User Stories 
 
@@ -157,7 +156,7 @@ The [W3C Validator Service](https://jigsaw.w3.org/css-validator/#validate_by_uri
 The CSS passed with no errors, click [here](static/testing/css.png) to see evidence.
 
 ### Performance 
-[Google lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practices and SEO of the website.
+[Google lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practices and SEO of the website. I am really happy with the outcome of this test select  [here](static/testing/lighthouse.png) to see evidence. 
 
 ### Javascript
 [JS Hint](https://jshint.com/) was used to test the Javascript code. Passed with zero errors select [here](static/testing/js.png) for evidence.
@@ -201,7 +200,7 @@ No Python errors.
 
 #### Site Owner 
 9. As the site owner I want the customers to easily navigate the website.
-    1. 1. The site is very easy to navigate especially with the fixed nav bar meaning users can get to different pages of the website easily.
+    1. The site is very easy to navigate especially with the fixed nav bar meaning users can get to different pages of the website easily.
     2. Each page is clearly labelled.
     3. All pages are fully responsive. 
 
@@ -236,7 +235,7 @@ No Python errors.
 4. PIP to instal all app requirements.
 
 ### How to run this project locally
-1. Click the green clone or download button in [Github](ADD LINK HERE **************)
+1. Click the green clone or download button in [Github](https://github.com/carolinecole25/MS3_CC_recipes)
 2. Select clipboard button on the right of the link provided.
 3. In your terminal, type git clone, paste in the previously copies linke and enter.
 4. Create a file .flaskenv and include `FLASK_APP=run.py` and `FLASK_ENV=deveopment`

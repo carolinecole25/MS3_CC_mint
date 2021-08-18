@@ -8,6 +8,11 @@ body {
 
 /* navigation bar  */
 
+nav .brand-logo {
+    margin-left: 10px;
+    text-transform: lowercase;
+}
+
 .backgroundcolor {
     background: #fceeedfd;
 }
@@ -50,6 +55,10 @@ body {
 
 .btn, .btn-large, .btn-small, .btn-flat {
     text-transform: none;
+}
+
+.btn-small {
+    margin: 0;
 }
 
 @media screen and (max-width: 767px){ 
