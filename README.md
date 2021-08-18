@@ -89,7 +89,7 @@ The images on the recipes section of website are of recipes to show clearly what
 The images on the utensils page are of products recommended for cooking. 
 
 ### Wireframes 
-* [Home](static/wireframes/home.png)
+* [Recipes](static/wireframes/home.png)
 * [Login](static/wireframes/login.png)
 * [Register](static/wireframes/register.png)
 * [Recipe](static/wireframes/recipe.png)
@@ -137,7 +137,7 @@ The images on the utensils page are of products recommended for cooking.
 ### HTML Validation
 The [W3C Markup Validator Service](https://validator.w3.org/) was used to validate the HTML of the website. All pages have no errors. 
 Click on the page to see the results:
-[Home](static/testing/htmlhome.png)
+[Recipes](static/testing/htmlhome.png)
 [Recipe](static/testing/htmlrecipe.png)
 [Add Recipe](static/testing/htmladdrecipe.png)
 [Edit Recipe](static/testing/htmleditrecipe.png)
@@ -156,15 +156,11 @@ Click on the page to see the results:
 The [W3C Validator Service](https://jigsaw.w3.org/css-validator/#validate_by_uri) was used to validate the CSS of the website.
 The CSS passed with no errors, click [here](static/testing/css.png) to see evidence.
 
-### Accessibility 
-[Wave WebAIM web accessibility valisation](https://wave.webaim.org/) was used to ensure the website met a high level of accessibility and had no errors.
-Click on the page name to see the result:
-
 ### Performance 
 [Google lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance, accessibility, best practices and SEO of the website.
 
 ### Javascript
-[JS Hint](https://jshint.com/) was used to test the Javascript code. All pages passed with zero errors, click on the pages to see the results:
+[JS Hint](https://jshint.com/) was used to test the Javascript code. Passed with zero errors select [here](static/testing/js.png) for evidence.
 
 ### Python
 No Python errors. 
@@ -295,7 +291,7 @@ No Python errors.
 2. Pay layouts taken from [Materialize](https://materializecss.com/) and with colours and screen sizes.
 
 ### CSS
-1. No references, all written by myself. 
+1. Some CSS code taken from [Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) module but more is for styling purposes. 
 
 ### Javascript
 1. Code for sidenav, collaspible and formselect taken from [Materialize](https://materializecss.com/).
