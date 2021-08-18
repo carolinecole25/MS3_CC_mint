@@ -16,7 +16,7 @@
             <label for="query">Search</label>
           </div>
           <div class="col s12 m6">
-            <a href="{{ url_for('utensils') }}" class="red btn text-shadow">Reset</a>
+            <a href="{{ url_for('utensils') }}" class="red darken-3 btn text-shadow">Reset</a>
             <button type="submit" class="btn text-shadow">
               <i class="fas fa-search left"></i> Search
             </button>
@@ -43,9 +43,10 @@
             <a href="{{url_for('utensil', utensil_id=utensil._id)}}"
               class="btn btn-view text-shadow backgroundcolor black-text">View Utensil</a>
             <br>
-            {% if session.utensil_user|lower == utensil.utesnil_created_by|lower %}
-            <a href="{{ url_for('edit_utensil', utensil_id=utensil._id) }}" class="fas fa-edit btn-small btn"> Edit</a>
-            <a href="#delete-modal-{{ utensil._id }}" class="red fas fa-trash 
+            {% if session.utensil_user|lower == utensil.utensil_created_by|lower %}
+            <a href="{{ url_for('edit_utensil', utensil_id=utensil._id) }}" 
+            class="fas fa-edit btn-small btn"> Edit</a>
+            <a href="#delete-modal-{{ utensil._id }}" class="red darken-3 fas fa-trash 
             recipe-btn btn-small btn modal-trigger">
               Delete</a>
             {% endif %}

@@ -21,7 +21,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
+# Recipes
 @app.route("/")
 @app.route("/get_recipe")
 def get_recipes():
@@ -29,6 +29,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Recipes
 @app.route("/recipe/<recipe_id>")
 def recipesingle(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -254,6 +255,7 @@ def add_utensil():
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
             "utensil_image": request.form.get("utensil_image"),
+            "created_by": session["utensil_user"]
         }
         mongo.db.utensils.insert_one(utensil)
         flash("You're utensil was successfully added")
@@ -280,6 +282,7 @@ def edit_utensil(utensil_id):
             "utensil_description": request.form.get("utensil_description"),
             "utensil_details": request.form.get("utensil_details"),
             "utensil_image": request.form.get("utensil_image"),
+            "created_by": session["utensil_user"]
         }
         mongo.db.utensils.update({"_id": ObjectId(utensil_id)}, submit_utensil)
         flash("Utensil was successfully updated")
