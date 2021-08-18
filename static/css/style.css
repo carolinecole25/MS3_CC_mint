@@ -61,12 +61,13 @@ nav .brand-logo {
     margin: 0;
 }
 
-@media screen and (max-width: 767px){ 
+@media screen and (max-width: 1024px){ 
     .btn, .btn-large, .btn-small, .btn-flat .search-btn {
         font-size: 75%;
         margin-top: 4px;
     }
 }
+
 
 /* images */
 

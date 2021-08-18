@@ -299,7 +299,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 ### Python 
 1. Code for project taken from[Code Institute, Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main/08-SearchingWithinTheDatabase) and edited to fit projects needs.
 2. The code for ingredients I wanted to pull through as a list instead of a line of each. I used help from [Kite](https://www.kite.com/python/answers/how-to-get-the-split-a-string-with-a-jinja2-template-in-python) to fix this issue.
-
+3. [Stack Over Flow](https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page) used to help me create the code for the 404 error page.
 ### Media
 1. Images for recipes and Utensils taken from [Google images](https://www.google.co.uk/imghp?hl=en&ogbl) and opened in new tab to get the URL.
 

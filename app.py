@@ -297,6 +297,13 @@ def edit_utensil(utensil_id):
     return render_template("edit_utensil.html", utensil=utensil)
 
 
+# Errors 
+@app.errorhandler(404)
+def error_404(error: object) -> object:
+    # Render the 404.html template in the case of a 404 error
+    return render_template("404.html", error=error), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
