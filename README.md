@@ -170,7 +170,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 #### Site Users
 1. The ability to easily use and navigate the website.
 | Feature | Action | Expected Result | Actual Result |
-|---------|--------|-----------------|---------------|
+| :--- | :--- | :--- | :--- |
 | Fully respsonvie nav bar | Click on which page would like to display | Navr bar will take the user to their desired page | Works as expected |
 
     1. There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
