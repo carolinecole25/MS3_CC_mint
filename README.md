@@ -110,6 +110,7 @@ The images on the utensils page are of products recommended for cooking.
 * [MongoDB](https://www.mongodb.com/) used to store data.
 * [Favicon](https://favicon.io/) used to my favicon.
 
+
 ## Features
 ### Existing Features 
 * The website will open displaying the Home, Login and Register page.
@@ -169,16 +170,20 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 
 #### Site Users
 1. The ability to easily use and navigate the website.
-| Feature | Action | Expected Result | Actual Result |
-| :--- | :--- | :--- | :--- |
+| Feature                  | Action                                    | Expected result                                   | Actual result     |
+|--------------------------|-------------------------------------------|---------------------------------------------------|-------------------|
 | Fully respsonvie nav bar | Click on which page would like to display | Navr bar will take the user to their desired page | Works as expected |
+|                          |                                           |                                                   |                   |
 
-    1. There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
+    1. Select [](here) to see evidence. 
 
 2. All recipes to be displaying effectively and is userfriendly.
-    1. All recipes appear on the recipe.html (home) page with all information.
-    2. The recipes have the functionality to edit and delete recipes if you are the owner.
-    3. There is a search box at the top of the page to enable users to search a particular recipe.
+    | Feature                                                                             | Action                                                                              | Expected result                                                      | Actual result     |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------|-------------------|
+| All recipes appear on the recipe.html (home) page with all information              | Recipes to display on the recipe.html (home page) and be responsive                 | All recipes are displayed clearly with images and view recipe button | Works as expected |
+| The recipes have the functionality to edit and delete recipes if you are the owner. | If user creates the recipes edit and delete buttons will appear next to the recipe  | Users to be able to edit and delete recipes added.                   | Works as expected |
+
+1. Select [](here) to see evidence. 
 
 3. A functioning main menu button which adapts to whether the user is logged in or not.
     1. The menu bar shows, home, login and register when a user first enters the site.
