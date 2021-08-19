@@ -176,7 +176,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 | Fully respsonvie nav bar | Click on which page would like to display | Navr bar will take the user to their desired page | Works as expected |
 |                          |                                           |                                                   |                   |
 
-Select [here]() to see evidence. 
+Select [here](static/testing/navbar.png) to see evidence. 
 
 2. All recipes to be displaying effectively and is userfriendly.
 
@@ -186,7 +186,7 @@ Select [here]() to see evidence.
 | The recipes have the functionality to edit and delete recipes if you are the owner | If user creates the recipes edit and delete buttons will appear next to the recipe  | Users to be able to edit and delete recipes added | Works as expected |
 | There is a search box at the top of the page to enable users to search a particular recipe | Users can enter any recipe in the search box and it will display the recipe | Users search for a recipe and it appear on the page once search is selected | Works as expected |
 
-Select [here]() to see evidence. 
+Select [here](static/testing/recipessearch.png) to see evidence. 
 
 3. A functioning main menu button which adapts to whether the user is logged in or not.
 
@@ -197,7 +197,7 @@ Select [here]() to see evidence.
 | Register page has a link to the login page  | If the user has not registered and tried to login, there is a popup which appears and an option the login and the bottom of the page  | User is able to easily navigate between the login and register page | Works as expected |
 | One logged in the menu bar will show all pages the user can now access | The menu bar expands to have recipes, profile, add recipes, utensils, add utensils and logout | The menu bar expands to have recipes, profile, add recipes, utensils, add utensils and logout | Works as expected |
 
-Select [here]() to see evidence. 
+Select [here](static/testing/login.png) to see evidence. 
 
 4. Visual icons and images that suit the website.
 
@@ -206,7 +206,7 @@ Select [here]() to see evidence.
 | Subtle pink menu bar with white background  | Colour scheme does not draw attension away from the recipes and information on the page  | User is happy with the look and feel of the website and returns to the website | Works as expected |
 | Images on the website are URLs of the recipes and utensils | This allows users to add recipes and utensils to the website easily | User happy upload recipes images and utensils images to the website | Works as expected |
 
-Select [here]() for evidence.
+Select [here](static/testing/colours.png) for evidence.
 
 5. MongoDB to store data safely and effectively.
 
@@ -235,25 +235,47 @@ Select [here]() for evidence.
 
 #### Site Owner 
 9. As the site owner I want the customers to easily navigate the website.
-    1. The site is very easy to navigate especially with the fixed nav bar meaning users can get to different pages of the website easily.
-    2. Each page is clearly labelled.
-    3. All pages are fully responsive. 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| The site is easy to navigate  | Fixed navbar means users can get to each page easily | All pages clearly labelled and buttons are clearly labelled | Works as expected |
+| Each page is clearly labelled | Each page as a subheading | Each page has a subheading | Works as expected |
+| All pages are fully responsive | Each page layout adapts to difference screen sizes | Site is responsive | Works as expected |
+
+Select [here](static/testing/labels.png) for evidence
 
 10. As the site owner I want all data inputted into the website, such as passwords, to be stored safely.
-    1. All passwords and information are stored safely on mongoDB 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| All data is stores safely and effectively on mongoDB. | Users able to login, register, add recipes and add utensils safely | MongoDB pulls through all data inputted from the website and stores it there  | Works as expected |
 
 11. As the site owner I want users coming back to use the site for inspiration or to have an easily accessible way of storing their recipes.
-    1.  The website is very user friendly which would make it a good place for users to store their recipes for easy access to them when cooking. 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| User friendly website | Leaves users wanting to store their recipes here | Easy and fun to use, hopefully users come back regularly for inspiration and to store their recipes here. | Works as expected | 
 
 12. As the site owner I want my websit to be fully functioning and responsive.
-    1. All pages are fully responsive and functioning. 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| All pages are fully responsive and functioning | All pages adapt to different screen sizes well | All pages adapt to screen sizes well | Works as expected |
+
+See evidence for home page [here](static/testing/responsive.png)
 
 13. As the site owner, I want the website to suit my target customer and adhere to their wants and needs.
-    1. I beleive the website suits my target audience.
-    2. The name is a good fit too as it is called mint (the herb) which goes with the theme of recipes cooking and baking.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| I beleive the website suits my target audience | The colour scheme and images suit the target audience | User to be happy with the website and return  | Works as expected |
+| The name is a good fit for my website | mint is a good name because it is also a cooking herb | Users will enjoy the name |  |
 
 14. As the site owner, I want the website to be professional.
-    1. I am pleased with the look and feel of this website. I beleive it feels professional and I hope users will think this too.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| Website to be professionally finished | Website is working as expected  | Website is working as expected | Works as expected |
 
 ## Bugs found and fixed during development 
 1. JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
