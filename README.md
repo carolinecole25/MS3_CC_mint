@@ -169,6 +169,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 
 #### Site Users
 1. The ability to easily use and navigate the website.
+Feature | Action | Expected Result | Actual Result 
     1. There is a fully functioning navigation bar that adapts to different screen sizes. All the pages are clearly labeled.
 
 2. All recipes to be displaying effectively and is userfriendly.
@@ -221,11 +222,13 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 14. As the site owner, I want the website to be professional.
     1. I am pleased with the look and feel of this website. I beleive it feels professional and I hope users will think this too.
 
-## Bugs
+## Bugs found and fixed during development 
 1. JavaScript dropdown menu did not work as expected, I used code from [Task Manager Auth Tutorial](https://github.com/Code-Institute-Solutions/TaskManagerAuth/blob/main/04-AddingATask-WritingToTheDatabase/02-materialize-select-validation/static/js/script.js) to fix this problem. 
 2. Utensils Search Box was not working and displaying an error about `$text`. I forgot to add the text index to mongoDB utensils collection so this is why it was not working. 
 3. On the recipes.html and utensils.html page, the card containers I was using from materialize were being distorted by the image sizes. I needed to adjust the image size but not have the images distorted so I used `object-fit: contain;` in CSS to fix this issue and added a height restriction. This worked well and now all the containers are equal sizes. 
 4. Utensils page was not showing the delete / edit functionality if the user was logged in. Part of the issue was, I had not included the created by for utensils in mongoDB or in my profile page or added them to the edit, add or utensils section in mongoDB. After they were added I needed to amend a few html eliments and it worked.
+5. Buttons on the search bar were not repsosnive. I added some CSS to make the buttons smaller as the screen sized got smaller.
+6. The card sizes on my recipes.html page and utensils.html page were different sizes. I amended the images to ensure these were always a certain size without distorting the image.
 
 ## Deployment
 
