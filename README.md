@@ -176,7 +176,7 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 | Fully respsonvie nav bar | Click on which page would like to display | Navr bar will take the user to their desired page | Works as expected |
 |                          |                                           |                                                   |                   |
 
-    1. Select [here]() to see evidence. 
+Select [here]() to see evidence. 
 
 2. All recipes to be displaying effectively and is userfriendly.
 
@@ -186,31 +186,52 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 | The recipes have the functionality to edit and delete recipes if you are the owner | If user creates the recipes edit and delete buttons will appear next to the recipe  | Users to be able to edit and delete recipes added | Works as expected |
 | There is a search box at the top of the page to enable users to search a particular recipe | Users can enter any recipe in the search box and it will display the recipe | Users search for a recipe and it appear on the page once search is selected | Works as expected |
 
-
-1. Select [here]() to see evidence. 
+Select [here]() to see evidence. 
 
 3. A functioning main menu button which adapts to whether the user is logged in or not.
-    1. The menu bar shows, home, login and register when a user first enters the site.
-    2. Login page as a link to the register page if they do not have an account.
-    3. Register page has a link to the login page if they already have an account.
-    4. Once logged in or registered the menu bar shows all options including utensils, add recipe and profile page.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| Menu bar shows login and register when the user first enters the website | User is able to login / register | User is able to login and register and a pop-up appears if they have already registered with that user | Works as expected |
+| Login page has a link to the register page  | If user has not registered and tried to login, there is a popup which will appear and an option to register at the bottom of the page | User is able to easily navigate between the login and register page  | Works as expected |
+| Register page has a link to the login page  | If the user has not registered and tried to login, there is a popup which appears and an option the login and the bottom of the page  | User is able to easily navigate between the login and register page | Works as expected |
+| One logged in the menu bar will show all pages the user can now access | The menu bar expands to have recipes, profile, add recipes, utensils, add utensils and logout | The menu bar expands to have recipes, profile, add recipes, utensils, add utensils and logout | Works as expected |
+
+Select [here]() to see evidence. 
 
 4. Visual icons and images that suit the website.
-    1. The website is a subtle pink which does not over power the website leaving users focussing soley on the recipes and the contents of the site.
-    2. The images on the website are URLs of the recipes which suit the contents and on the utensils page.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| Subtle pink menu bar with white background  | Colour scheme does not draw attension away from the recipes and information on the page  | User is happy with the look and feel of the website and returns to the website | Works as expected |
+| Images on the website are URLs of the recipes and utensils | This allows users to add recipes and utensils to the website easily | User happy upload recipes images and utensils images to the website | Works as expected |
+
+Select [here]() for evidence.
 
 5. MongoDB to store data safely and effectively.
-    1. All data is stores safely and effectively on mongoDB.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| All data is stores safely and effectively on mongoDB. | Users able to login, register, add recipes and add utensils safely | MongoDB pulls through all data inputted from the website and stores it there  | Works as expected |
 
 6. Leaves users to wanting follow other users recipes and gain inspiration to cook. 
-    1. I believe the site will leave users happy and engaged because it is very user friendly and is easy to search for recipes. 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| General website | Website to leave users wanting to come back | Users return to the website to follow other's recipes and use it as a place to store their own | Works as expected |
 
 7. Leaves users wanting to add more of their recipes onto the website.
-    1. The website is very user friendly which would make it a good place for users to store their recipes for easy access to them when cooking. 
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| User friendly website | User are able to easily navigate and use the website  | User's can easily navigate the website and make use of all its functionalities | Works as expected |
 
 8. Users to enjoy visiting the website.
-    1. I believe this website could entice anyone to get into cooking or baking.
-    2. Hopefully users will come back for me.
+
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| Users to enjoy the website | The website to entice more people into cooking and baking | Hopefully users are inspired to cook and bake more often | Works as expected |
+
 
 #### Site Owner 
 9. As the site owner I want the customers to easily navigate the website.
