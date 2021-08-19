@@ -170,20 +170,24 @@ The CSS passed with no errors, click [here](static/testing/css.png) to see evide
 
 #### Site Users
 1. The ability to easily use and navigate the website.
+
 | Feature                  | Action                                    | Expected result                                   | Actual result     |
 |--------------------------|-------------------------------------------|---------------------------------------------------|-------------------|
 | Fully respsonvie nav bar | Click on which page would like to display | Navr bar will take the user to their desired page | Works as expected |
 |                          |                                           |                                                   |                   |
 
-    1. Select [](here) to see evidence. 
+    1. Select [here]() to see evidence. 
 
 2. All recipes to be displaying effectively and is userfriendly.
-    | Feature                                                                             | Action                                                                              | Expected result                                                      | Actual result     |
-|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------|-------------------|
-| All recipes appear on the recipe.html (home) page with all information              | Recipes to display on the recipe.html (home page) and be responsive                 | All recipes are displayed clearly with images and view recipe button | Works as expected |
-| The recipes have the functionality to edit and delete recipes if you are the owner. | If user creates the recipes edit and delete buttons will appear next to the recipe  | Users to be able to edit and delete recipes added.                   | Works as expected |
 
-1. Select [](here) to see evidence. 
+| Feature | Action | Expected result | Actual result |
+|---|---|---|---|
+| All recipes appear on the recipe.html (home) page with all information | Recipes to display on the recipe.html (home page) and be responsive | All recipes are displayed clearly with images and view recipe button | Works as expected |
+| The recipes have the functionality to edit and delete recipes if you are the owner | If user creates the recipes edit and delete buttons will appear next to the recipe  | Users to be able to edit and delete recipes added | Works as expected |
+| There is a search box at the top of the page to enable users to search a particular recipe | Users can enter any recipe in the search box and it will display the recipe | Users search for a recipe and it appear on the page once search is selected | Works as expected |
+
+
+1. Select [here]() to see evidence. 
 
 3. A functioning main menu button which adapts to whether the user is logged in or not.
     1. The menu bar shows, home, login and register when a user first enters the site.
